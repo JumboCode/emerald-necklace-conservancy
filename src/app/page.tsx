@@ -1,14 +1,14 @@
-/*
-    Import the button from 'components/Button.tsx'
-    Render the button below the h1 tag, passing it the appropriate props
-*/
-export default function Home() {
-	return (
-		<div>
-			{
-				<h1>Emerald Necklace Button</h1>
-				/* Render the button here */
-			}
-		</div>
-	)
+"use client"
+
+import React from 'react';
+import Home from '../components/WelcomePage';
+
+function App() {
+  return (
+    <div className="App">
+      <Home />
+    </div>
+  );
 }
+
+export default App;
