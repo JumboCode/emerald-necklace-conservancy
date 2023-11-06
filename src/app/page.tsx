@@ -1,14 +1,13 @@
-/*
-    Import the button from 'components/Button.tsx'
-    Render the button below the h1 tag, passing it the appropriate props
-*/
-export default function Home() {
+import ParkNav from '../components/ParkNav';
+import React from "react";
+
+function App() {
+	const ParkID1 = "franklin-park";
 	return (
 		<div>
-			{
-				<h1>Emerald Necklace Button</h1>
-				/* Render the button here */
-			}
+			<ParkNav parkID = {ParkID1}/>
 		</div>
 	)
 }
+
+export default ParkNav;
