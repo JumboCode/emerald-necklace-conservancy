@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ParkModal from './ParkModal';
 
 // Assume WelcomePage.js is in the same directory and exported as default
 const WelcomePage = ({ onStart }) => {
@@ -17,7 +18,12 @@ const WelcomePage = ({ onStart }) => {
 // MapPage component (for demonstration)
 const MapPage = () => {
   // Simple placeholder for the actual Map component
-  return <div><p>Map</p></div>;
+  return (
+    <div>
+      <p>Map</p>
+      <ParkModal title="Alex" text="alex" url="../app/franklin-park/attractions/page" open={true}/>
+    </div>
+  );
 };
 
 // Home component that uses the WelcomePage
