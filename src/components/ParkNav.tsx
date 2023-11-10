@@ -3,7 +3,6 @@ import React from 'react'
 import Link from 'next/link'
 
 
-
 export default function ParkNav ({parkID} : {parkID:any}) {
     return (
         <div> 
