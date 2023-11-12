@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 
 type ParkNameProps = {
-	name: string
-}
+  name: string;
+};
 
 const ParkName: React.FC<ParkNameProps> = ({ name }) => {
-	return (
-		<div className="bg-[#D6DF3D] px-4 py-4 rounded-[15px] w-[250px]">
-			<h1 className="text-black text-center text-lg font-bold">{name}</h1>
-		</div>
-	)
-}
+  return (
+    <div style={{ backgroundColor: 'yellow', padding: '10px' }}>
+      <h1 style={{ color: 'black' }}>{name}</h1>
+    </div>
+  );
+};
 
-export default ParkName
+export default ParkName;
