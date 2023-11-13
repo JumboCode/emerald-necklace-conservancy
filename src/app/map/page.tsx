@@ -1,6 +1,26 @@
 'use client'
 
 import React from "react";
+import {useState} from 'react';
+
+interface ModalsState {
+    park1: boolean;
+    park2: boolean;
+    park3: boolean;
+    park4: boolean;
+    park5: boolean;
+    park6: boolean;
+}
+
+const initialState: ModalsState = {
+    park1: false,
+    park2: false,
+    park3: false,
+    park4: false,
+    park5: false,
+    park6: false,
+};
+
 
 export default function MapPage() {
 
