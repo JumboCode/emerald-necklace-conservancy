@@ -1,4 +1,5 @@
-import React from "react";
+import Link from 'next/link'
+import React from 'react'
 
 /**
  * Props for the Modal component
@@ -9,29 +10,33 @@ import React from "react";
  * @property {boolean} open - Whether the modal is open or not
  */
 type ModalProps = {
-        title: string;
-        text: string;
-        url: string;
-        open: boolean;
-};
+	title: string
+	text: string
+	url: string
+	open: boolean
+}
 
 const Modal: React.FC<ModalProps> = ({ title, text, url, open }) => {
-  return (
-    <>
-      {open && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close">&times;</span>
-            <h2 className='text-red-500' >{title}</h2>
-            <p>{text}</p>
-            <a href={url} target="_blank" rel="noreferrer">
-              {url}
-            </a>
-          </div>
-        </div>
-      )}
-    </>
-  );
-};
+	return (
+		<>
+			{open && (
+				<div className="bg-[#567534] w-[330px] rounded-[20px] py-4 px-2">
+					<h2 className="text-3xl text-white text-center mt-2">
+						{title}
+					</h2>
+					<p className="px-6 py-6  text-white">{text}</p>
+					<div className="flex items-center justify-center">
+						<Link
+							href={url}
+							className="text-lg bg-[#D6DF3D] py-4 rounded-[10px] px-8"
+						>
+							Check it Out
+						</Link>
+					</div>
+				</div>
+			)}
+		</>
+	)
+}
 
-export default Modal;
+export default Modal

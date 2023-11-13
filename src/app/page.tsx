@@ -1,14 +1,14 @@
-"use client"
+'use client'
 
-import React from 'react';
-import Home from '../components/WelcomePage';
+import React from 'react'
+import Home from '../components/WelcomePage'
 
 function App() {
-  return (
-    <div className="App">
-      <Home />
-    </div>
-  );
+	return (
+		<div className="App">
+			<Home />
+		</div>
+	)
 }
 
-export default App;
+export default App
