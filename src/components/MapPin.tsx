@@ -1,24 +1,12 @@
-"use client"
-import React from 'react';
+'use client'
+import React from 'react'
+import Pin from '@/assets/map-pin.png'
+import Image from 'next/image'
 
 interface MapPinProps {
-  size: number;
+	size: number
 }
 
-export default function MapPin ({ size } : {size:any}) {
-  return (
-    <div
-      style={{
-        width: `${size}px`,
-        height: `${size}px`,
-        background: 'purple',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'white', // Color for the text inside the pin
-      }}
-    >
-      P
-    </div>
-  );
-};
+export default function MapPin({ size }: { size: any }) {
+	return <Image src={Pin} alt="Map Pin" width={size} height={size} />
+}
