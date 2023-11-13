@@ -1,3 +1,4 @@
+import ParkName from '@/components/ParkName'
 import MapPin from '@/components/MapPin'
 import ParkNav from '../components/ParkNav'
 import React from 'react'
@@ -5,10 +6,10 @@ import React from 'react'
 function App() {
 	const ParkID1 = 'franklin-park'
 	return (
-		<div>
-			<ParkNav parkID={ParkID1} />
-		</div>
+		<>
+			<ParkName name={ParkID1} />
+		</>
 	)
 }
 
-export default ParkNav
+export default App
