@@ -1,4 +1,5 @@
 import ParkName from '@/components/ParkName'
+import MapPin from '@/components/MapPin'
 import ParkNav from '../components/ParkNav'
 import React from 'react'
 
