@@ -9,6 +9,9 @@ function App() {
 		<>
 			<ParkName name={ParkID1} />
 		</>
+		<>
+			<ParkName name={ParkID1} />
+		</>
 	)
 }
 
