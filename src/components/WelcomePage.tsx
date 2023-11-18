@@ -17,22 +17,32 @@ const WelcomePage = ({ onStart }) => {
 
 // MapPage component (for demonstration)
 const MapPage = () => {
-  // Simple placeholder for the actual Map component
-  return <div><p>Map</p></div>;
-};
+	// Simple placeholder for the actual Map component
+	return (
+		<div>
+			<p>Map</p>
+			<ParkModal
+				title="Franklin Park"
+				text="At 527 acres, Franklin Park is the largest park in the Emerald Necklace. Named for Benjamin Franklin, the park brings together rural scenery, spectacular rock outcroppings, a woodland preserve, expansive pastoral vistas and an area for active recreation and sports."
+				url="/parks"
+				open={true}
+			/>
+		</div>
+	)
+}
 
 // Home component that uses the WelcomePage
 const Home = () => {
-  // State hook to manage whether the map is shown or not
-  const [showMap, setShowMap] = useState(false);
+	// State hook to manage whether the map is shown or not
+	const [showMap, setShowMap] = useState(false)
 
-  // Event handler to change the state when the welcome page is clicked
-  const handleStart = () => {
-    setShowMap(true); // Update the state to show the map
-  };
+	// Event handler to change the state when the welcome page is clicked
+	const handleStart = () => {
+		setShowMap(true) // Update the state to show the map
+	}
 
-  // Conditional rendering based on the state of `showMap`
-  return showMap ? <MapPage /> : <WelcomePage onStart={handleStart} />;
-};
+	// Conditional rendering based on the state of `showMap`
+	return showMap ? <MapPage /> : <WelcomePage onStart={handleStart} />
+}
 
-export default Home;
+export default Home
