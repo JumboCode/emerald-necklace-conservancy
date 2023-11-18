@@ -1,13 +1,14 @@
-'use client'
-
+import ParkName from '@/components/ParkName'
+import MapPin from '@/components/MapPin'
+import ParkNav from '../components/ParkNav'
 import React from 'react'
-import Home from '../components/WelcomePage'
 
 function App() {
+	const ParkID1 = 'franklin-park'
 	return (
-		<div className="App">
-			<Home />
-		</div>
+		<>
+			<ParkName name={ParkID1} />
+		</>
 	)
 }
 
