@@ -1,4 +1,4 @@
-import { Hanken_Grotesk } from "next/font/google";
+/* import { Hanken_Grotesk } from "next/font/google";
 import { useState } from "react"
 
 export default function WeatherButton(props) {
@@ -26,4 +26,4 @@ export default function WeatherButton(props) {
         </div>
     )
 
-}
+} */

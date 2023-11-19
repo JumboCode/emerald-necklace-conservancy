@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap'); */
 
 :root {
 	--foreground-rgb: 0, 0, 0;
@@ -59,6 +60,19 @@ body {
 	line-height: 1.5;
 }
 
-.myButton {
+/* .myButton {
   @apply text-black bg-sky-200 hover:bg-blue-300 px-10 py-5 font-serif text-lg text-black border-none rounded-2xl cursor-pointer opacity-60;
+} */
+
+.button-border {
+    color: #333333;
+    padding: 5px 15px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    background-color: #D6DF3D;
+    box-shadow: 0 4px 1px rgba(120, 123, 92, 0.8); /* Add strong drop shadow */
 }
