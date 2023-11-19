@@ -1,3 +1,4 @@
+import { Orelega_One } from 'next/font/google';
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -11,6 +12,9 @@ const config: Config = {
       backgroundImage: {
           'map': "url('/img/map.png')",
         },
+        // fontFamily: {
+        //   font: ['var(--font-orelega_One)'],
+        // },
       },
     },
   plugins: [],
