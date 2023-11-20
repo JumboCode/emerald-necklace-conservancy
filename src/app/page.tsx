@@ -1,16 +1,17 @@
-/*
-    Import the button from 'components/Button.tsx'
-    Render the button below the h1 tag, passing it the appropriate props
-*/
-import Button from '../components/Button.tsx';
+import ParkName from '@/components/ParkName'
+import MapPin from '@/components/MapPin'
+import ParkNav from '../components/ParkNav'
+import React from 'react'
+import MapPage from './map/page';
 
-export default function Home() {
-  const loading = 'Load Weather Data'; // Assuming loading is a string that represents the button label
+function App() {
+	const ParkID1 = 'franklin-park'
+	return (
+		<>
+			<MapPage />
+		</>
 
-  return (
-    <div>
-      <h1>Emerald Necklace Button</h1>
-      <Button label={loading} />
-    </div>
-  );
+	)
 }
+
+export default App

@@ -1,35 +1,29 @@
-"use client"
-import React, { useState } from 'react';
+import { Hanken_Grotesk } from "next/font/google";
+import { useState } from "react"
 
-interface ButtonProps {
-  label: string;
+export default function WeatherButton(props) {
+    const [unit, setUnit] = useState([])
+    const [temperature, setTemp] = useState([])
+    const [shortForecast, setForecast] = useState([])
+
+
+	const handleClick = () => {
+		fetch("https://api.weather.gov/gridpoints/BOX/69,92/forecast")
+			.then((res) => res.json())
+			.then((json) => {
+				console.log(json);
+				setTemp(json["properties"]["periods"][0]["temperature"])
+				setForecast(json["properties"]["periods"][0]["shortForecast"])
+                setUnit(json["properties"]["periods"][0]["temperatureUnit"])
+			});
+	}
+
+    return (
+        <div>
+            <p onClick={handleClick} className="button">{props.label}</p>
+            <p className="text-center">{temperature} {unit}</p>
+            <p className="text-center">{shortForecast}</p>
+        </div>
+    )
+
 }
-
-export default function Button ({ label }) {
-  const [weatherData, setWeatherData] = useState<string>('');
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch('https://api.weather.gov/gridpoints/BOX/69,92/forecast');
-      const data = await response.json();
-      const currentTemperature = data.properties.periods[0].temperature;
-      const currentWeather = data.properties.periods[0].shortForecast;
-      const updatedLabel = `Temperature: ${currentTemperature}°F, Weather: ${currentWeather}`;
-      setWeatherData(updatedLabel);
-    } catch (error) {
-      console.error('Error fetching weather data:', error);
-    }
-  };
-
-  return (
-    <div>
-      <button
-        onClick={fetchData}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-      >
-        {label}
-      </button>
-      <p>{weatherData}</p>
-    </div>
-  );
-};
