@@ -12,6 +12,10 @@ const Background: React.FC = () => {
           className="block max-h-screen"
           alt="Map Image"
         />
+
+        <p className="absolute left-[24%] top-[72%] rounded-lg bg-green-600 px-2 py-1 font-bold text-white">
+          Goat
+        </p>
         
         <div className="absolute top-[4.88%] left-[1.27%]">
           <img src="/map_images/dove_tree.png" alt="Dove Tree" width={160} />

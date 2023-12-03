@@ -19,14 +19,6 @@
 		--background-end-rgb: 0, 0, 0;
 	}
 }
-/* 
-body {
-	@apply bg-map object-cover max-w-screen-2xl bg-cover bg-center flex h-screen items-center justify-center;
-}
-
-p {
-	font-family: 'questrial', 'sans-serif';
-}
 
 .button {
 	display: flex;
