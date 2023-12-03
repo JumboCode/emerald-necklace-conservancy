@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Logo from '../assets/new-enc-logo-300x144 1.png'
 import Splash from '../assets/splashscreen 1.png'
 import Image from 'next/image'
-import './WelcomePageAnimation.css'
 
 // Assume WelcomePage.js is in the same directory and exported as default
 const WelcomePage = () => {
@@ -22,7 +21,6 @@ const WelcomePage = () => {
 	}
 	return (
 		<div
-		className={animate ? "scale-out-center" : ""}
 		//   className="text-2xl w-full h-screen flex justify-center items-center bg-#FFFFFF cursor-pointer"
 		onClick={handleClick}
 		>
