@@ -16,6 +16,10 @@ const config: Config = {
         //   font: ['var(--font-orelega_One)'],
         // },
       },
+      fontFamily : {
+        'orelega': ['Orelega One', 'sans-serif'],
+        'questrial': ['Questrial', 'sans-serif'],
+      },
     },
   plugins: [],
 }
