@@ -1,5 +1,5 @@
 'use client'
-
+import '../globals.css';
 import React from "react";
 import {useState} from 'react';
 import MapPin from "@/components/MapPin";

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 /* @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 :root {
 	--foreground-rgb: 0, 0, 0;
@@ -15,6 +17,14 @@
 		--background-start-rgb: 0, 0, 0;
 		--background-end-rgb: 0, 0, 0;
 	}
+}
+
+body {
+	@apply bg-map object-cover max-w-screen-2xl bg-cover bg-center h-screen flex items-center justify-center;
+}
+
+p {
+	font-family: 'Questrial', sans-serif;
 }
 
 .button {
