@@ -5,15 +5,17 @@ import MapPin from '@/components/MapPin';
 import ParkNav from '../components/ParkNav';
 import WelcomePage from '../components/WelcomePage';
 import MapPage from './map/page';
-import BackBayFensHistory from './back-bay-fens/page'
-
+import Background from '@/components/Background';
 
 function App() {
+	const ParkID1 = 'franklin-park'
+	return (
+		<>
+			<Background />
+			{/* <MapPage /> */}
+		</>
 
-
-  return (
-    <WelcomePage/>
-  );
+	)
 }
 
 export default App;
