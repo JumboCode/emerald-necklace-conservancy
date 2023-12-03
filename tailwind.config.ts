@@ -8,14 +8,6 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-          'map': "url('/img/map.png')",
-        },
-        // fontFamily: {
-        //   font: ['var(--font-orelega_One)'],
-        // },
-      },
     },
   plugins: [],
 }
