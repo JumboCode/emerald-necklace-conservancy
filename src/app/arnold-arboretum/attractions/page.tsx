@@ -4,6 +4,7 @@
 'use client'
 
 import React from "react";
+import ParkTitle from "@/components/ParkTitle";
 
 export default function ArnArbAttractions() {
 	return (
