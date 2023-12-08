@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Logo from '../assets/new-enc-logo-300x144 1.png'
 import Splash from '../assets/splashscreen 1.png'
 import Image from 'next/image'
-
+import MapPage from '@/app/map/page';
 // Assume WelcomePage.js is in the same directory and exported as default
 const WelcomePage = () => {
 	const [animate, setAnimate] = useState(false);
@@ -34,20 +34,20 @@ const WelcomePage = () => {
 };
 
 // MapPage component (for demonstration)
-const MapPage = () => {
-	// Simple placeholder for the actual Map component
-	return (
-		<div>
-			<p>Map</p>
-			{/* <ParkModal
-				title="Franklin Park"
-				text="At 527 acres, Franklin Park is the largest park in the Emerald Necklace. Named for Benjamin Franklin, the park brings together rural scenery, spectacular rock outcroppings, a woodland preserve, expansive pastoral vistas and an area for active recreation and sports."
-				url="/parks"
-				open={true}
-			/> */}
-		</div>
-	)
-}
+// const MapPage = () => {
+// 	// Simple placeholder for the actual Map component
+// 	return (
+// 		<div>
+// 			<p>Map</p>
+// 			{/* <ParkModal
+// 				title="Franklin Park"
+// 				text="At 527 acres, Franklin Park is the largest park in the Emerald Necklace. Named for Benjamin Franklin, the park brings together rural scenery, spectacular rock outcroppings, a woodland preserve, expansive pastoral vistas and an area for active recreation and sports."
+// 				url="/parks"
+// 				open={true}
+// 			/> */}
+// 		</div>
+// 	)
+// }
 
 // Home component that uses the WelcomePage
 
