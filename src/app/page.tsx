@@ -18,7 +18,6 @@ function App() {
     <>
       {showMap ? (
 		<>
-        {/* <MapPage /> */}
 		<Background />
 		</>
       ) : (

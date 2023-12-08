@@ -43,7 +43,7 @@ export default function MapPage() {
                 <MapPin size = {75}/>
             </div>
             <div className="absolute" style ={{left: '60px', top: '250px'}}>
-                <ParkName name = {"Arnold Arboretum"}/>
+                <ParkName name = {"Arnold Arboretum"} modalTitle = {"Arnold Arboretum"} modalText = {"temp"} modalUrl= { "www.google.com" } />
             </div>
             <div className="absolute" style ={{right: '165px', top: '425px'}}>
                 <MapPin size = {75}/>
