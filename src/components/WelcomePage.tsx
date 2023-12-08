@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import Image from 'react';
+import ParkModal from '@/components/ParkModal';
 
 // Assume WelcomePage.js is in the same directory and exported as default
-const WelcomePage = ({ onStart }) => {
+const WelcomePage = ({ onStart } : { onStart:any }) => {
   return (
     <div
       className="text-2xl w-full h-screen flex justify-center items-center bg-#FFFFFF cursor-pointer"
       onClick={onStart}
     >
-      <Image src="logo.png" alt="Logo" style={{ width: '20%', position: 'relative', top: '-100px' }} />
+      <img src="logo.png" alt="Logo" style={{ width: '20%', position: 'relative', top: '-100px' }} />
       <h1 className="absolute top-45 left-1/2 transform -translate-x-1/2 text-center text-black font-bold text-3xl">Park History and Attractions</h1>
       <h1 className="absolute bottom-28 text-3xl left-1/2 transform -translate-x-1/2 text-center text-gray-800">Tap Anywhere to Start</h1>
     </div>

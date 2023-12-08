@@ -20,7 +20,7 @@
 }
 
 body {
-	@apply bg-map object-cover max-w-screen-2xl bg-cover bg-center h-screen flex items-center justify-center;
+	@apply object-cover max-w-screen-2xl bg-cover bg-center h-screen flex items-center justify-center;
 }
 
 p {

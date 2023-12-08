@@ -4,6 +4,7 @@ import React from "react";
 import {useState} from 'react';
 import MapPin from "@/components/MapPin";
 import ParkName from '@/components/ParkName';
+import MapLayout from '../layout.tsx';
 
 interface ModalsState {
     park1: boolean;
