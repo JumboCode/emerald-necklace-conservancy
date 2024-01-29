@@ -5,9 +5,10 @@ import ParkNav from '../components/ParkNav'
 import React from 'react'
 import MapPage from './map/page';
 import WelcomePage from '../components/WelcomePage'
+import BackBayFensHistory from './back-bay-fens/page'
+
 
 function App() {
-	const ParkID1 = 'franklin-park'
 	return (
 		<>
 			<WelcomePage />

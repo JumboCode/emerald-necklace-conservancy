@@ -1,18 +1,49 @@
 import React from 'react';
-import Image from 'next/image'
+import ParkTitle from "@/components/ParkTitle"
 
-
-export default function ParkImage({ direction, src, height, width }: { direction: 'left' | 'right', src: string, height: number, width: number }) {
-    const containerClassesRight = 'border-b-[15px] border-r-[15px] border-lime-400 '
-    const containerClassesLeft = 'border-b-[15px] border-l-[15px] border-lime-400 '
-    const imageClasses = `p-${direction === 'right' ? 'l' : 'r'}-2.5`; // Tailwind padding class, adjust as needed
-    // final return
-    return (
-        <div className={direction === 'right' ? containerClassesRight : containerClassesLeft}>
-            <div className={imageClasses}>
-                <Image src={src} height={height} width={width} alt="Park Image" />
-            </div>
-        </div>
-   )
+function splitStringByLength(str: string, length: number): string[] {
+    
+    let result: string[] = [];
+    for (let i = 0; i < str.length; i += length) {
+        result.push(str.substring(i, i + length));
+    }
+    return result;
 }
 
+type ImageListProps = {
+  images: string[]; // Array of image URLs
+};
+
+const ImageList: React.FC<ImageListProps> = ({ images }) => {
+  return (
+    <div>
+      {images.map((image, index) => (
+        <>
+        <div
+          key={index}
+          className={`flex ${index % 2 === 1 ? 'justify-start pl-10' : 'justify-end pr-10'}`}
+        >
+          <img
+            src={image}
+            alt={`Image ${index}`}
+            className={`my-4 max-h-60 ${
+              index % 2 === 1 
+                ? 'border-b-8 border-l-8 border-custom-NavBarGreen' // Left side, bottom-left border
+                : 'border-b-8 border-r-8 border-custom-NavBarGreen' // Right side, bottom-right border
+            }`}
+          />
+
+        </div>
+        <div
+          key={index}
+          className={`flex ${index % 2 === 0 ? 'justify-start pl-10' : 'justify-end pr-10'}`}
+        >
+            
+        </div>
+        </>
+      ))}
+    </div>
+  );
+};
+
+export default ImageList;

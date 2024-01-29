@@ -8,7 +8,7 @@ interface ParkTitleProps {
   
   const ParkTitle: React.FC<ParkTitleProps> = ({ title, bodyText }) => {
     return (
-      <div className="absolute top-0 left-0 mt-10 ml-10">
+      <div className="absolute top-10 left-10 mt-10 ml-10 bg-custom-white rounded-lg">
         <div className = "p-6 max-w-sm">
           <h1 className="text-2xl font-semibold font-Inter mb-4">{title}</h1>
             <p>{bodyText}</p>
