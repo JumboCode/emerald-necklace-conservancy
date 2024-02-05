@@ -100,12 +100,16 @@ p {
 .parallax {
     perspective: 1px;
     height: 100vh;
-    width: 80vw;
+    width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
   }
+  .parallax__static {
+    position: sticky;
+    top: 0;
+  }
   .parallax__layer {
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     bottom: 0;
@@ -114,11 +118,16 @@ p {
   .parallax__layer--base {
     transform: translateZ(0);
   }
+  .parallax__layer--baseback {
+    transform: translateZ(-0.5px) scale(1.5);
+  }
   .parallax__layer--back {
     transform: translateZ(-1px) scale(2);
+    z-index: -2;
   }
   .parallax__layer--deep {
     transform: translateZ(-2px) scale(3);
+    z-index: -3;
   }
   .parallax__group {
     position: relative;

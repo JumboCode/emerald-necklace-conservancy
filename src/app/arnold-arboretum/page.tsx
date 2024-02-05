@@ -41,29 +41,43 @@ export default function ArnArbHistory() {
   
     return (
         <div className="bg-custom-HistoryBackgroundGreen">  
-            <ParkNav page={"History"} park={"arnold-arboretum"}/>
-
-            <Image src={background} alt="Splash Background" style={{
-                width: '100%',          // Ensures the image is full width.
-                transformOrigin: 'top', // Ensures the image scales from the top.
-                height: '100%'
-            }}/>
-            
-            <div className="absolute top-20 w-full"> {/* Positioned ImageList */}
-                <ImageList images={pictures} />
+            <div class="parallax__fixed">
+                <ParkNav page={"History"} park={"arnold-arboretum"}/>
             </div>
-            
-            <div>
-                <ParkTitle
-                    title="Arnold Arboretum"
-                    bodyText="Established in 1872, the Arnold Arboretum is open 
-                            daily to the public as a free landscape for the study 
-                            and enjoyment of trees, shrubs, and vines. 
-                            As North America’s first public arboretum and a 
-                            National Historic Landmark, it is owned by the City 
-                            of Boston and managed by Harvard University under a 
-                            1,000-year lease signed in 1882.."
-                />
+
+            <div id="group1" class="parallax parallax__group">
+                <div class="parallax__layer parallax__layer--baseback">
+                    <ParkTitle
+                        title="Arnold Arboretum"
+                        bodyText="Established in 1872, the Arnold Arboretum is open 
+                                daily to the public as a free landscape for the study 
+                                and enjoyment of trees, shrubs, and vines. 
+                                As North America's first public arboretum and a 
+                                National Historic Landmark, it is owned by the City 
+                                of Boston and managed by Harvard University under a 
+                                1,000-year lease signed in 1882.."
+                    />
+                </div>
+
+                <div class="parallax__layer parallax__layer--back">
+                    <div className="absolute top-20 w-full"> {/* Positioned ImageList */}
+                        <ImageList images={pictures} />
+                    </div>
+                </div>
+                
+                <div class="parallax__layer parallax__layer--deep">
+                    <Image src={background} alt="Splash Background" style={{
+                        width: '100%',          // Ensures the image is full width.
+                        transformOrigin: 'top', // Ensures the image scales from the top.
+                        height: '100%'
+                    }}/>
+                </div>
+
+                
+
+                
+
+                
             </div>
         </div>
     );
