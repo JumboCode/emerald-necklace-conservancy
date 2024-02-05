@@ -82,3 +82,46 @@ p {
     background-color: #D6DF3D;
     box-shadow: 0 4px 1px rgba(120, 123, 92, 0.8); /* Add strong drop shadow */
 }
+
+
+
+.gap {
+    height: 100px;
+    width: 100px;
+}
+.testblock {
+    height: 100px;
+    width: 100px;
+    background:rgb(95, 255, 95);
+    display:inline-block;
+}
+
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    width: 80vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+  }
+  .parallax__layer--deep {
+    transform: translateZ(-2px) scale(3);
+  }
+  .parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+  }
