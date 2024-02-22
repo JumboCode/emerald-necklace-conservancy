@@ -4,6 +4,7 @@ import React from "react";
 import {useState} from 'react';
 import MapPin from "@/components/MapPin";
 import ParkName from '@/components/ParkName';
+import background_image from '../../../public/img/map.png'
 
 interface ModalsState {
     park1: boolean;
@@ -59,21 +60,35 @@ export default function MapPage() {
             <div className="absolute" style={{ bottom: "210px", left: "500px" }}>
                 <img src="/map_images/turtle.png" alt="turtle" width={80} />
             </div>
+            <div className="absolute" style={{ right: "47px", top: "160px" }}>
+                <img src="/map_images/blue_heron.png" alt="blue_heron" width={100} />
+            </div>
+            <div className="absolute" style={{ top: "108px", left: "550px" }}>
+                <img src="/map_images/sailboat.png" alt="sailboat" width={80} />
+            </div>
+            <div className="absolute" style={{ top: "108px", left: "470px" }}>
+                <img src="/map_images/camorant.png" alt="camorant" width={80} />
+            </div>
             <div className="absolute" style ={{left: '200px', top: '140px'}} >
+                <MapPin size = {75}/>
+            </div>
+            <div className="absolute" style ={{right: '160px', top: '130px'}}>
+                <MapPin size = {75}/>
+            </div>
+            <div className="absolute" style ={{right: '165px', top: '425px'}}>
+                <MapPin size = {75}/>
+            </div>
+            <div className="absolute" style ={{bottom: "160px", left:"380px"}}>
                 <MapPin size = {75}/>
             </div>
             <div className="absolute" style ={{left: '60px', top: '250px'}}>
                 <ParkName name = {"Arnold Arboretum"} text={text[park.Arnold_Arboretum]} open={open} setOpen={setOpen} index={park.Arnold_Arboretum}/>
             </div>
-            <div className="absolute" style ={{right: '165px', top: '425px'}}>
-                <MapPin size = {75}/>
-            </div>
+           
             <div className="absolute" style ={{right: '55px', top: '530px'}}>
                 <ParkName name = {"Back Bay Fens"} text={text[park.Back_Bay]} open={open} setOpen={setOpen} index={park.Back_Bay}/>
             </div>
-            <div className="absolute" style ={{bottom: "160px", left:"380px"}}>
-                <MapPin size = {75}/>
-            </div>
+        
             <div className="absolute" style ={{bottom: "70px", left:"380px"}}>
                 <ParkName name = {"Franklin Park"} text={text[park.Franklin_Park]} open={open} setOpen={setOpen} index={park.Franklin_Park}/>
             </div>
@@ -83,24 +98,15 @@ export default function MapPage() {
             <div className="absolute" style ={{left: '200px', top: '40px'}}>
                 <ParkName name = {"Jamaica Pond"} text={text[park.Jamaica_Pond]} open={open} setOpen={setOpen} index={park.Jamaica_Pond}/>
             </div>
-            <div className="absolute" style={{ top: "108px", left: "550px" }}>
-                <img src="/map_images/sailboat.png" alt="sailboat" width={80} />
-            </div>
-            <div className="absolute" style={{ top: "108px", left: "470px" }}>
-                <img src="/map_images/camorant.png" alt="camorant" width={80} />
-            </div>
+            
             <div className="absolute" style ={{right: '430px', top: '120px'}}>
                 <MapPin size = {75}/>
             </div>
             <div className="absolute" style ={{right: '350px', top: '225px'}}>
                 <ParkName name = {"Olmsted Park"} text={text[park.Olmsted_Park]} open={open} setOpen={setOpen} index={park.Olmsted_Park}/>
             </div>
-            <div className="absolute" style ={{right: '160px', top: '130px'}}>
-                <MapPin size = {75}/>
-            </div>
-            <div className="absolute" style={{ right: "47px", top: "160px" }}>
-                <img src="/map_images/blue_heron.png" alt="blue_heron" width={100} />
-            </div>
+            
+           
             <div className = "absolute" style = {{right: '105px', top: '40px'}}>
                 <ParkName name = {"Riverway"} text={text[park.Riverway]} open={open} setOpen={setOpen} index={park.Riverway}/>
             </div>
