@@ -22,7 +22,6 @@ const Modal: React.FC<ModalProps> = ({ title, text, url, open }) => {
 
 	// franklin-park up
 	if ((url == "/franklin-park") || (url == "/back-bay-fens") ) {
-		console.log("going to move up")
 		return (
 			<>
 				{open && (
