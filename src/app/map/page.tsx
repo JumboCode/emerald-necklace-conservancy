@@ -4,7 +4,7 @@ import React from "react";
 import {useState} from 'react';
 import MapPin from "@/components/MapPin";
 import ParkName from '@/components/ParkName';
-import background_image from '../../../public/img/map.png'
+// import background_image from '/img/map.png'
 
 interface ModalsState {
     park1: boolean;
@@ -45,7 +45,7 @@ const text: string[] = [
 
 export default function MapPage() {
     const [open, setOpen] = useState<boolean[]>(new Array(park.Back_Bay + 1).fill(false));
-
+    
     return (
         <div className="bg-map bg-cover bg-center min-h-screen w-full flex items-center justify-center object-cover">
             <div className="absolute" style={{ top: "40px", left: "15px" }}>
@@ -111,6 +111,7 @@ export default function MapPage() {
                 <ParkName name = {"Riverway"} text={text[park.Riverway]} open={open} setOpen={setOpen} index={park.Riverway}/>
             </div>
             <br/>
+            <img src="/img/map.png"/> {/* This is the new background image! */}
         </div>
     );
 };
