@@ -7,7 +7,10 @@ import WelcomePage from '../components/WelcomePage'
 import MapPage from './map/page'
 
 function App() {
+
+
   return (
+    <WelcomePage/>
     <WelcomePage/>
   );
 }
