@@ -9,20 +9,10 @@ import BackBayFensHistory from './back-bay-fens/page'
 
 
 function App() {
-  const [showMap, setShowMap] = useState(false);
 
-  const handleWelcomePageClick = () => {
-    setShowMap(true);
-  }
 
   return (
-    <>
-      {showMap ? (
-        <MapPage />
-      ) : (
-        <WelcomePage onWelcomePageClick={handleWelcomePageClick} />
-      )}
-    </>
+    <WelcomePage/>
   );
 }
 
