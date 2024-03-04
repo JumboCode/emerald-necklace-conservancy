@@ -17,26 +17,78 @@ type ModalProps = {
 }
 
 const Modal: React.FC<ModalProps> = ({ title, text, url, open }) => {
-	return (
-		<>
-			{open && (
-				<div className="absolute bg-[#567534] w-[330px] rounded-[20px] py-4 px-2">
-					<h2 className="text-3xl text-white text-center mt-2">
-						{title}
-					</h2>
-					<p className="px-6 py-6  text-white">{text}</p>
-					<div className="flex items-center justify-center">
-						<Link
-							href={url}
-							className="text-lg bg-[#D6DF3D] py-4 rounded-[10px] px-8"
-						>
-							Check it Out
-						</Link>
+
+	const modalHeight = 400; 
+
+	// franklin-park up
+	if ((url == "/franklin-park") || (url == "/back-bay-fens") ) {
+		return (
+			<>
+				{open && (
+					<div className="absolute bg-[#567534] w-[330px] rounded-[20px] py-4 px-200" style={{ top: `calc(50% - ${modalHeight}px)` }}>
+						<h2 className="text-3xl text-white text-center mt-2">
+							{title}
+						</h2>
+						<p className="px-6 py-6  text-white">{text}</p>
+						<div className="flex items-center justify-center">
+							<Link
+								href={url}
+								className="text-lg bg-[#D6DF3D] py-4 rounded-[10px] px-8"
+							>
+								Check it Out
+							</Link>
+						</div>
 					</div>
-				</div>
-			)}
-		</>
-	)
+				)}
+			</>
+		)
+	} else if (url == "/riverway") {
+		return (
+			<>
+				{open && (
+					<div className="absolute bg-[#567534] w-[300px] rounded-[20px] py-4 px-200" >
+						<h2 className="text-3xl text-white text-center mt-2">
+							{title}
+						</h2>
+						<p className="px-6 py-6  text-white">{text}</p>
+						<div className="flex items-center justify-center">
+							<Link
+								href={url}
+								className="text-lg bg-[#D6DF3D] py-4 rounded-[10px] px-8"
+							>
+								Check it Out
+							</Link>
+						</div>
+					</div>
+				)}
+			</>
+		)
+	} else { // we have space for it to come down from the park title
+		return (
+			<>
+				{open && (
+					<div className="absolute bg-[#567534] w-[330px] rounded-[20px] py-4 px-200">
+						<h2 className="text-3xl text-white text-center mt-2">
+							{title}
+						</h2>
+						<p className="px-6 py-6  text-white">{text}</p>
+						<div className="flex items-center justify-center">
+							<Link
+								href={url}
+								className="text-lg bg-[#D6DF3D] py-4 rounded-[10px] px-8"
+							>
+								Check it Out
+							</Link>
+						</div>
+					</div>
+				)}
+			</>
+		)
+	}
+	// back-bay-fens up 
+	// riverway squeeze from right
+
+	
 }
 
 export default Modal

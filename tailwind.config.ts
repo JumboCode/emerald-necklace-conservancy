@@ -9,9 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-          'map': "url('/img/map.png')",
-        },
+      // backgroundImage: {
+      //     'map': "url('/img/map.png')",
+      //   },
         // fontFamily: {
         //   font: ['var(--font-orelega_One)'],
         // },
