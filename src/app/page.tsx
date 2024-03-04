@@ -7,13 +7,7 @@ import WelcomePage from '../components/WelcomePage';
 import MapPage from './map/page';
 
   return (
-    <>
-      {showMap ? (
-        <MapPage />
-      ) : (
-        <WelcomePage onWelcomePageClick={handleWelcomePageClick} />
-      )}
-    </>
+    <WelcomePage/>
   );
 }
 
