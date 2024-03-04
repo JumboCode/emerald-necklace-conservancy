@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 /* @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 :root {
 	--foreground-rgb: 0, 0, 0;
@@ -15,6 +17,14 @@
 		--background-start-rgb: 0, 0, 0;
 		--background-end-rgb: 0, 0, 0;
 	}
+}
+
+body {
+	@apply bg-map object-cover max-w-screen-2xl bg-cover bg-center h-screen flex items-center justify-center;
+}
+
+p {
+	font-family: 'Questrial', sans-serif;
 }
 
 .button {
@@ -72,3 +82,55 @@
     background-color: #D6DF3D;
     box-shadow: 0 4px 1px rgba(120, 123, 92, 0.8); /* Add strong drop shadow */
 }
+
+
+
+.gap {
+    height: 100px;
+    width: 100px;
+}
+.testblock {
+    height: 100px;
+    width: 100px;
+    background:rgb(95, 255, 95);
+    display:inline-block;
+}
+
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .parallax__static {
+    position: sticky;
+    top: 0;
+  }
+  .parallax__layer {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  .parallax__layer--baseback {
+    transform: translateZ(-0.5px) scale(1.5);
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+    z-index: -2;
+  }
+  .parallax__layer--deep {
+    transform: translateZ(-2px) scale(3);
+    z-index: -3;
+  }
+  .parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+  }

@@ -20,7 +20,7 @@ const Modal: React.FC<ModalProps> = ({ title, text, url, open }) => {
 	return (
 		<>
 			{open && (
-				<div className="bg-[#567534] w-[330px] rounded-[20px] py-4 px-2">
+				<div className="absolute bg-[#567534] w-[330px] rounded-[20px] py-4 px-2">
 					<h2 className="text-3xl text-white text-center mt-2">
 						{title}
 					</h2>

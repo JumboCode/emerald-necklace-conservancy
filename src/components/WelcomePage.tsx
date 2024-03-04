@@ -1,48 +1,28 @@
-import React, { useState } from 'react';
-import Image from 'react';
-
-// Assume WelcomePage.js is in the same directory and exported as default
-const WelcomePage = ({ onStart }) => {
-  return (
-    <div
-      className="text-2xl w-full h-screen flex justify-center items-center bg-#FFFFFF cursor-pointer"
-      onClick={onStart}
-    >
-      <Image src="logo.png" alt="Logo" style={{ width: '20%', position: 'relative', top: '-100px' }} />
-      <h1 className="absolute top-45 left-1/2 transform -translate-x-1/2 text-center text-black font-bold text-3xl">Park History and Attractions</h1>
-      <h1 className="absolute bottom-28 text-3xl left-1/2 transform -translate-x-1/2 text-center text-gray-800">Tap Anywhere to Start</h1>
-    </div>
-  );
-};
-
-// MapPage component (for demonstration)
-const MapPage = () => {
-	// Simple placeholder for the actual Map component
-	return (
-		<div>
-			<p>Map</p>
-			<ParkModal
-				title="Franklin Park"
-				text="At 527 acres, Franklin Park is the largest park in the Emerald Necklace. Named for Benjamin Franklin, the park brings together rural scenery, spectacular rock outcroppings, a woodland preserve, expansive pastoral vistas and an area for active recreation and sports."
-				url="/parks"
-				open={true}
-			/>
-		</div>
-	)
-}
-
-// Home component that uses the WelcomePage
-const Home = () => {
-	// State hook to manage whether the map is shown or not
-	const [showMap, setShowMap] = useState(false)
-
-	// Event handler to change the state when the welcome page is clicked
-	const handleStart = () => {
-		setShowMap(true) // Update the state to show the map
+import React, { useState, useEffect} from 'react';
+import Logo from '../assets/new-enc-logo-300x144 1.png'
+import Splash from '../assets/splashscreen 1.png'
+import Image from 'next/image'
+  
+const WelcomePage = () => {
+	
+	
+	const handleClick = () => {
+		window.location.href = '/map';
 	}
 
-	// Conditional rendering based on the state of `showMap`
-	return showMap ? <MapPage /> : <WelcomePage onStart={handleStart} />
-}
+	return (
+		<div
+		//   className="text-2xl w-full h-screen flex justify-center items-center bg-#FFFFFF cursor-pointer"
+		onClick={handleClick}
+		>
+			<p>Park History and Attractions</p>
+			<Image src={Splash} alt="Splash Background" style={{  position: "absolute", top: "0", left: "0", width: "100%", height: "100%"}}/>
+			<p>Park History and Attractions</p>
+			<Image src={Logo} alt="Logo" style={{ position: 'absolute', top: '10%', left: '10%', width: "20%", height: "20%"}}/>
+			<h1 className="absolute top-45 left-1/2 transform -translate-x-1/2 text-center text-black font-bold text-3xl" style={{position: "absolute", top: '32%', left: '19%', width: "20%", height: "20%"}}>Park History and Attractions</h1>
+		</div>
+	);
+};
 
-export default Home
+export default WelcomePage
+

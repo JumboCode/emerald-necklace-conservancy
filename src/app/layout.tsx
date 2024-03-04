@@ -1,8 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Orelega_One } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const orlega = Orelega_One({
+  subsets: ["latin-ext"],
+  weight: '400'
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={orlega.className}>{children}</body>
     </html>
   )
 }

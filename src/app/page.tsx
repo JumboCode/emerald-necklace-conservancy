@@ -1,19 +1,20 @@
-import ParkName from '@/components/ParkName'
-import MapPin from '@/components/MapPin'
-import ParkNav from '../components/ParkNav'
-import React from 'react'
+'use client'
+import React, { useState } from 'react';
+import ParkName from '@/components/ParkName';
+import MapPin from '@/components/MapPin';
+import ParkNav from '../components/ParkNav';
+import WelcomePage from '../components/WelcomePage';
 import MapPage from './map/page';
-import Background from '@/components/Background';
 
-function App() {
-	const ParkID1 = 'franklin-park'
-	return (
-		<>
-			<Background />
-			{/* <MapPage /> */}
-		</>
-
-	)
+  return (
+    <>
+      {showMap ? (
+        <MapPage />
+      ) : (
+        <WelcomePage onWelcomePageClick={handleWelcomePageClick} />
+      )}
+    </>
+  );
 }
 
-export default App
+export default App;
