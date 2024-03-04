@@ -6,15 +6,20 @@
 import React from "react";
 import ParkTitle from "@/components/ParkTitle";
 import MenuButton from "@/components/MenuButton";
+import ParkNav from "@/components/ParkNav";
+import arnoldmap from '/public/img/arnoldmap.png';
+import menu_icon from '/public/img/menu_icon.png';
+import Image from 'next/image'
 
 export default function ArnArbAttractions() {
 	return (
-		<div>
-			{
-				<h1>Arnold Arboretum Attractions</h1>
-				
-
-			}
+		<div className="bg-custom-HistoryBackgroundGreen h-full w-full">
+				<div className='flex justify-center items-center h-screen'>
+					<ParkNav page={"Attractions"} park={"arnold-arboretum"}/>
+					<Image className="absolute top-20 right-10" src={menu_icon} alt="Menu Icon" width={150} height={150}/>
+					<Image className='m-auto' src={arnoldmap} alt="Arnold Arboretum Map" width={800} height={800}/>
+					<p className="text-white font-[orelega] text-6xl absolute bottom-0 left-0 ml-10 mb-20">Arnold Arboretum</p>
+				</div>
 		</div>
 	)
 }
