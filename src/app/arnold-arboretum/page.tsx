@@ -4,6 +4,9 @@
 'use client'
 import React from "react"
 import AttractionsContainer from '@/components/AttractionsContainer'
+import { useState } from "react";
+import { redirect } from "react-router-dom";
+
 
 export default function ArnArbHistory() {
     const pictures = [
