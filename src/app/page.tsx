@@ -6,7 +6,8 @@ import ParkNav from '../components/ParkNav';
 import WelcomePage from '../components/WelcomePage';
 import MapPage from './map/page';
 
-  return (
+export function App() {
+  return ( 
     <WelcomePage/>
   );
 }
