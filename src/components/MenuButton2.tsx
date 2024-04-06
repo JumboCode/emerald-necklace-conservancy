@@ -26,14 +26,14 @@ const MenuButton2: React.FC<DropdownProps> = ({ options }) => {
         </button>
         </div>
         {isOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-custom-NavBarGreen rounded-lg shadow-xl">
+          <div className="absolute right-0 mt-2 w-48 bg-custom-NavBarGreen rounded-lg shadow-xl z-100]">
             {options.map((option, index) => (
               <a
                 key={index}
                 href="#"
                 className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white border-b-2 border-black"
               >
-                {<p>option</p>}
+                {option}
               </a>
             ))}
           </div>
