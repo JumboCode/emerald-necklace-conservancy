@@ -7,15 +7,10 @@ import WelcomePage from '../components/WelcomePage';
 import MapPage from './map/page';
 import Background from '@/components/Background';
 
-function App() {
-	const ParkID1 = 'franklin-park'
-	return (
-		<>
-			<Background />
-			{/* <MapPage /> */}
-		</>
-
-	)
+export function App() {
+  return ( 
+    <WelcomePage/>
+  );
 }
 
 export default App
