@@ -25,7 +25,7 @@ const Modal: React.FC<ModalProps> = ({ title, text, url, open }) => {
 		return (
 			<>
 				{open && (
-					<div className="absolute bg-[#567534] w-[330px] rounded-[20px] py-4 px-200" style={{ top: `calc(50% - ${modalHeight}px)` }}>
+					<div data-modal className="absolute bg-[#567534] w-[330px] rounded-[20px] py-4 px-200" style={{ top: `calc(50% - ${modalHeight}px)` }}>
 						<h2 className="text-3xl text-white text-center mt-2">
 							{title}
 						</h2>
@@ -46,7 +46,7 @@ const Modal: React.FC<ModalProps> = ({ title, text, url, open }) => {
 		return (
 			<>
 				{open && (
-					<div className="absolute bg-[#567534] w-[300px] rounded-[20px] py-4 px-200" >
+					<div data-modal className="absolute bg-[#567534] w-[300px] rounded-[20px] py-4 px-200" >
 						<h2 className="text-3xl text-white text-center mt-2">
 							{title}
 						</h2>
@@ -67,7 +67,7 @@ const Modal: React.FC<ModalProps> = ({ title, text, url, open }) => {
 		return (
 			<>
 				{open && (
-					<div className="absolute bg-[#567534] w-[330px] rounded-[20px] py-4 px-200">
+					<div data-modal className="absolute bg-[#567534] w-[330px] rounded-[20px] py-4 px-200">
 						<h2 className="text-3xl text-white text-center mt-2">
 							{title}
 						</h2>

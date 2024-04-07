@@ -1,9 +1,10 @@
 'use client'
 import '../globals.css'
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import MapPin from '@/components/MapPin'
 import ParkName from '@/components/ParkName'
+import ParkModal from '@/components/ParkModal'
 
 interface ModalsState {
   park1: boolean
@@ -45,6 +46,27 @@ export default function MapPage () {
   const [open, setOpen] = useState<boolean[]>(
     new Array(park.Back_Bay + 1).fill(false)
   )
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      let clickIsInModal = false
+      document.querySelectorAll('[data-modal]').forEach(el => {
+        if (event.target && el.contains(event.target as Node)) {
+          clickIsInModal = true;
+        }
+      })
+      if (clickIsInModal) {
+        return;
+      }
+      const isModalOpen = open.some(isOpen => isOpen);
+      if (isModalOpen) {
+        setOpen(open.map(() => false));
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [open]);
 
   return (
     <div className="bg-map bg-cover bg-center min-h-screen w-full flex items-center justify-center object-cover">
@@ -65,6 +87,9 @@ export default function MapPage () {
       </div>
       <div className='absolute' style={{ top: '90px', left: '475px' }}>
         <img src='/map_images/sailboat.png' alt='sailboat' width={80} />
+      </div>
+      <div className='absolute' style={{ top: '105px', left: '385px' }}>
+        <img src='/map_images/camorant.png' alt='camorant' width={80} />
       </div>
       <div className='absolute' style={{ left: '170px', top: '135px' }}>
         <MapPin size={75} />
@@ -96,15 +121,6 @@ export default function MapPage () {
           index={park.Back_Bay}
         />
       </div>
-      <div className='absolute' style={{ bottom: '40px', left: '330px' }}>
-        <ParkName
-          name={'Franklin Park'}
-          text={text[park.Franklin_Park]}
-          open={open}
-          setOpen={setOpen}
-          index={park.Franklin_Park}
-        />
-      </div>
       <div className='absolute' style={{ left: '445px', top: '30px' }}>
         <MapPin size={75} />
       </div>
@@ -117,9 +133,6 @@ export default function MapPage () {
           index={park.Jamaica_Pond}
         />
       </div>
-      <div className='absolute' style={{ top: '90px', left: '385px' }}>
-        <img src='/map_images/camorant.png' alt='camorant' width={80} />
-      </div>
       <div className='absolute' style={{ right: '370px', top: '105px' }}>
         <MapPin size={75} />
       </div>
@@ -130,6 +143,15 @@ export default function MapPage () {
           open={open}
           setOpen={setOpen}
           index={park.Olmsted_Park}
+        />
+      </div>
+      <div className='absolute' style={{ bottom: '40px', left: '330px' }}>
+        <ParkName
+          name={'Franklin Park'}
+          text={text[park.Franklin_Park]}
+          open={open}
+          setOpen={setOpen}
+          index={park.Franklin_Park}
         />
       </div>
       <div className='absolute' style={{ right: '80px', top: '30px' }}>

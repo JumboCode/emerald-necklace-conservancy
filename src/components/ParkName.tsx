@@ -18,7 +18,7 @@ enum park {
 }
 
 type ParkNameProps = {
-    name: string;
+  name: string;
 	text: string;
 	open: boolean[];
 	setOpen: React.Dispatch<React.SetStateAction<boolean[]>>;
@@ -35,7 +35,7 @@ const ParkName: React.FC<ParkNameProps> = ({ name, text, open, setOpen, index })
 	}
 
 	return (
-		<>		
+		<>
 			<button 
 				className="button-border"
 				onClick={handleClick}>
