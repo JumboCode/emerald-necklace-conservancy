@@ -48,40 +48,37 @@ export default function MapPage () {
 
   return (
     <div className="bg-map bg-cover bg-center min-h-screen w-full flex items-center justify-center object-cover">
-      <div className='absolute' style={{ top: '40px', left: '15px' }}>
+      <div className='absolute' style={{ top: '55px', left: '0px' }}>
         <img src='/map_images/dove_tree.png' alt='Dove Tree' width={160} />
       </div>
-      <div className='absolute' style={{ top: '117px', left: '300px' }}>
+      <div className='absolute' style={{ top: '115px', left: '250px' }}>
         <img src='/map_images/bonsai.png' alt='bonsai' width={90} />
       </div>
-      <div className='absolute' style={{ bottom: '230px', left: '330px' }}>
+      <div className='absolute' style={{ bottom: '170px', left: '290px' }}>
         <img src='/map_images/giraffe.png' alt='giraffe' width={170} />
       </div>
-      <div className='absolute' style={{ bottom: '210px', left: '500px' }}>
+      <div className='absolute' style={{ bottom: '160px', left: '430px' }}>
         <img src='/map_images/turtle.png' alt='turtle' width={80} />
       </div>
-      <div className='absolute' style={{ right: '47px', top: '160px' }}>
+      <div className='absolute' style={{ right: '30px', top: '145px' }}>
         <img src='/map_images/blue_heron.png' alt='blue_heron' width={100} />
       </div>
-      <div className='absolute' style={{ top: '108px', left: '550px' }}>
+      <div className='absolute' style={{ top: '90px', left: '475px' }}>
         <img src='/map_images/sailboat.png' alt='sailboat' width={80} />
       </div>
-      <div className='absolute' style={{ top: '108px', left: '470px' }}>
-        <img src='/map_images/camorant.png' alt='camorant' width={80} />
-      </div>
-      <div className='absolute' style={{ left: '200px', top: '140px' }}>
+      <div className='absolute' style={{ left: '170px', top: '135px' }}>
         <MapPin size={75} />
       </div>
-      <div className='absolute' style={{ right: '160px', top: '130px' }}>
+      <div className='absolute' style={{ right: '135px', top: '110px' }}>
         <MapPin size={75} />
       </div>
-      <div className='absolute' style={{ right: '165px', top: '425px' }}>
+      <div className='absolute' style={{ right: '135px', top: '365px' }}>
         <MapPin size={75} />
       </div>
-      <div className='absolute' style={{ bottom: '160px', left: '380px' }}>
+      <div className='absolute' style={{ bottom: '120px', left: '320px' }}>
         <MapPin size={75} />
       </div>
-      <div className='absolute' style={{ left: '60px', top: '250px' }}>
+      <div className='absolute' style={{ left: '0px', top: '240px' }}>
         <ParkName
           name={'Arnold Arboretum'}
           text={text[park.Arnold_Arboretum]}
@@ -90,7 +87,7 @@ export default function MapPage () {
           index={park.Arnold_Arboretum}
         />
       </div>
-      <div className='absolute' style={{ right: '55px', top: '530px' }}>
+      <div className='absolute' style={{ right: '45px', top: '470px' }}>
         <ParkName
           name={'Back Bay Fens'}
           text={text[park.Back_Bay]}
@@ -99,7 +96,7 @@ export default function MapPage () {
           index={park.Back_Bay}
         />
       </div>
-      <div className='absolute' style={{ bottom: '70px', left: '380px' }}>
+      <div className='absolute' style={{ bottom: '40px', left: '330px' }}>
         <ParkName
           name={'Franklin Park'}
           text={text[park.Franklin_Park]}
@@ -108,10 +105,10 @@ export default function MapPage () {
           index={park.Franklin_Park}
         />
       </div>
-      <div className='absolute' style={{ left: '520px', top: '50px' }}>
+      <div className='absolute' style={{ left: '445px', top: '30px' }}>
         <MapPin size={75} />
       </div>
-      <div className='absolute' style={{ left: '200px', top: '40px' }}>
+      <div className='absolute' style={{ left: '150px', top: '25px' }}>
         <ParkName
           name={'Jamaica Pond'}
           text={text[park.Jamaica_Pond]}
@@ -120,10 +117,13 @@ export default function MapPage () {
           index={park.Jamaica_Pond}
         />
       </div>
-      <div className='absolute' style={{ right: '430px', top: '120px' }}>
+      <div className='absolute' style={{ top: '90px', left: '385px' }}>
+        <img src='/map_images/camorant.png' alt='camorant' width={80} />
+      </div>
+      <div className='absolute' style={{ right: '370px', top: '105px' }}>
         <MapPin size={75} />
       </div>
-      <div className='absolute' style={{ right: '350px', top: '225px' }}>
+      <div className='absolute' style={{ right: '260px', top: '205px' }}>
         <ParkName
           name={'Olmsted Park'}
           text={text[park.Olmsted_Park]}
@@ -132,7 +132,7 @@ export default function MapPage () {
           index={park.Olmsted_Park}
         />
       </div>
-      <div className='absolute' style={{ right: '105px', top: '40px' }}>
+      <div className='absolute' style={{ right: '80px', top: '30px' }}>
         <ParkName
           name={'Riverway'}
           text={text[park.Riverway]}
