@@ -49,7 +49,7 @@ export default function ArnArbAttractions () {
               })
             }}
           >
-            <SingleAttraction number={10} image={'/img/gray_box.jpeg'} />
+            <SingleAttraction number={ATTRACTION_START + 0} image={'/img/gray_box.jpeg'} />
           </div>
           <div
             className='relative bottom-60 left-80'
@@ -59,7 +59,7 @@ export default function ArnArbAttractions () {
               })
             }}
           >
-            <SingleAttraction number={11} image={'/img/gray_box.jpeg'} />
+            <SingleAttraction number={ATTRACTION_START + 1} image={'/img/gray_box.jpeg'} />
           </div>
           <div
             className='relative bottom-96 left-96'
@@ -69,7 +69,7 @@ export default function ArnArbAttractions () {
               })
             }}
           >
-            <SingleAttraction number={12} image={'/img/gray_box.jpeg'} />
+            <SingleAttraction number={ATTRACTION_START + 2} image={'/img/gray_box.jpeg'} />
             <div
               className='relative left-40 bottom-20'
               onClick={() => {
@@ -78,7 +78,7 @@ export default function ArnArbAttractions () {
                 })
               }}
             >
-              <SingleAttraction number={13} image={'/img/gray_box.jpeg'} />
+              <SingleAttraction number={ATTRACTION_START + 3} image={'/img/gray_box.jpeg'} />
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function ArnArbAttractions () {
         </p>
       </div>
 
-      <div className='h-300vh bg-custom-HistoryBackgroundGreen h-full w-full'>
+      <div className='bg-custom-HistoryBackgroundGreen w-full'>
         {' '}
         <div ref={descriptionRefs[0]}>
           <AttractionInformation
