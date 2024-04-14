@@ -1,8 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter, Orelega_One } from 'next/font/google';
+import { Questrial, Orelega_One } from 'next/font/google';
 
-const orlega = Orelega_One({
+const orelega = Orelega_One({
+  subsets: ["latin-ext"],
+  weight: '400'
+});
+
+const questrial = Questrial({
   subsets: ["latin-ext"],
   weight: '400'
 });
@@ -19,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={orlega.className}>{children}</body>
+      <body className={orelega.className}>{children}</body>
     </html>
   )
 }
