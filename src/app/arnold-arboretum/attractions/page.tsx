@@ -73,6 +73,7 @@ export default function ArnArbAttractions () {
             <div
               className='relative left-40 bottom-20'
               onClick={() => {
+                console.log(descriptionRefs)
                 descriptionRefs[3].current?.scrollIntoView({
                   behavior: 'smooth'
                 })

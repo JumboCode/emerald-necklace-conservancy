@@ -33,7 +33,7 @@ export default function JamaicaAttractions () {
   const ATTRACTION_START = 14
 
   return (
-    <div className='bg-custom-HistoryBackgroundGreen h-full w-full'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
       <div className='flex justify-center items-center h-screen'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'jamaica-pond'} />
@@ -49,7 +49,8 @@ export default function JamaicaAttractions () {
           />
 		  {/* Update: Change for amt of attractions */}
           <div
-            className='relative bottom-96 left-20'
+            className='absolute'
+            style={{ bottom: '24%', left: '41%'}}
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -62,7 +63,8 @@ export default function JamaicaAttractions () {
             />
           </div>
           <div
-            className='relative bottom-80 left-96'
+            className='absolute'
+            style={{ bottom: '63%', left: '50%'}}
             onClick={() => {
               descriptionRefs[1].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -75,7 +77,8 @@ export default function JamaicaAttractions () {
             />
           </div>
           <div
-            className='relative bottom-96 left-116'
+            className='absolute'
+            style={{ bottom: '38%', left: '62%'}}
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -98,7 +101,7 @@ export default function JamaicaAttractions () {
       <div className='bg-custom-HistoryBackgroundGreen w-full'>
         {' '}
 		{/* Update refs here */}
-        <div ref={descriptionRefs[0]}>
+        <div ref={descriptionRefs[0]} id='0'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 0}
             attractionName={'Jamica Pond Boathouse/Bandstand'}
@@ -112,7 +115,7 @@ export default function JamaicaAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[1]}>
+        <div ref={descriptionRefs[1]} id='1'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 1}
             attractionName={'Parkman Memorial'}
@@ -121,7 +124,7 @@ export default function JamaicaAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[2]}>
+        <div ref={descriptionRefs[2]} id='2'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 2}
             attractionName={'The Playstead'}
