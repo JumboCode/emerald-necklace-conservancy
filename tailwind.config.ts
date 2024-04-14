@@ -1,4 +1,3 @@
-import { Orelega_One } from 'next/font/google';
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -9,12 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // backgroundImage: {
-      //     'map': "url('/img/map.png')",
-      //   },
-        // fontFamily: {
-        //   font: ['var(--font-orelega_One)'],
-        // },
         colors: {
           'custom-NavBarGreen': '#A6B646',
           'custom-HistoryBackgroundGreen': '#567534',
