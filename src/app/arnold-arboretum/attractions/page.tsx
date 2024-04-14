@@ -42,7 +42,8 @@ export default function ArnArbAttractions () {
             height={800}
           />
           <div
-            className='relative bottom-60 left-20'
+            className='absolute'
+            style={{ bottom: '55%', left: '27%'}}
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -52,7 +53,8 @@ export default function ArnArbAttractions () {
             <SingleAttraction number={ATTRACTION_START + 0} image={'/img/gray_box.jpeg'} />
           </div>
           <div
-            className='relative bottom-60 left-80'
+            className='absolute'
+            style={{ bottom: '45%', left: '45%'}}
             onClick={() => {
               descriptionRefs[1].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -62,7 +64,8 @@ export default function ArnArbAttractions () {
             <SingleAttraction number={ATTRACTION_START + 1} image={'/img/gray_box.jpeg'} />
           </div>
           <div
-            className='relative bottom-96 left-96'
+            className='absolute'
+            style={{ bottom: '50%', left: '55%'}}
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -71,7 +74,8 @@ export default function ArnArbAttractions () {
           >
             <SingleAttraction number={ATTRACTION_START + 2} image={'/img/gray_box.jpeg'} />
             <div
-              className='relative left-40 bottom-20'
+              className='absolute'
+              style={{ bottom: '55%', left: '60%'}}
               onClick={() => {
                 console.log(descriptionRefs)
                 descriptionRefs[3].current?.scrollIntoView({
