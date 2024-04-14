@@ -2,8 +2,10 @@
 import '../globals.css'
 import React from 'react'
 import { useState } from 'react'
+
 import MapPin from '@/components/MapPin'
 import ParkName from '@/components/ParkName'
+import MapButton from '@/components/MapButton'
 
 interface ModalsState {
   park1: boolean
