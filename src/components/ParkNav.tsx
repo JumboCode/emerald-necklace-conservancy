@@ -1,5 +1,10 @@
 import React from 'react';
 
+type MapButtonProps = {
+    selected?: boolean;
+    onClick: () => void;
+};
+
 type NavButtonProps = {
   label: string;
   selected?: boolean;
@@ -21,7 +26,7 @@ const NavButton: React.FC<NavButtonProps> = ({ label, selected, onClick }) => {
 
 type NavBarProps = {
 	park: string;
-	page: 'History' | 'Attractions' | 'Directions';
+	page: 'History' | 'Attractions' | 'Directions' | 'Email Signup';
 };
 
 const NavBar: React.FC<NavBarProps> = ({page, park}) => {
@@ -42,6 +47,13 @@ const NavBar: React.FC<NavBarProps> = ({page, park}) => {
 			window.location.href = `/${park}/directions`;
 		}
 	}
+
+    const handleSignup = () => {
+        if (page !== 'Email Signup') {
+            window.location.href = `/email`
+        }
+    }
+
 	const handleMap = () => {
 		window.location.href = `/map`;
 		
@@ -56,6 +68,7 @@ const NavBar: React.FC<NavBarProps> = ({page, park}) => {
             <NavButton label="History" selected={page === 'History'} onClick={handleHistory} />
             <NavButton label="Attractions" selected={page === 'Attractions'} onClick={handleAttractions} />
             <NavButton label="Directions" selected={page === 'Directions'} onClick={handleDirections} />
+            <NavButton label="Signup" selected={page ==='Email Signup'} onClick={handleSignup} />
           </div>
         </div>
       </div>

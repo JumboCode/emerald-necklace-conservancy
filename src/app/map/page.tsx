@@ -2,8 +2,10 @@
 import '../globals.css'
 import React from 'react'
 import { useState } from 'react'
+
 import MapPin from '@/components/MapPin'
 import ParkName from '@/components/ParkName'
+import MapButton from '@/components/MapButton'
 
 interface ModalsState {
   park1: boolean
@@ -44,10 +46,14 @@ const text: string[] = [
 export default function MapPage () {
   const [open, setOpen] = useState<boolean[]>(
     new Array(park.Back_Bay + 1).fill(false)
+
   )
 
   return (
     <div className="bg-map bg-cover bg-center min-h-screen w-full flex items-center justify-center object-cover">
+      <div>
+    <MapButton></MapButton>
+    </div>
       <div className='absolute' style={{ top: '40px', left: '15px' }}>
         <img src='/map_images/dove_tree.png' alt='Dove Tree' width={160} />
       </div>
