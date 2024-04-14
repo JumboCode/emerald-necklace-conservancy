@@ -30,7 +30,7 @@ const MenuButton2: React.FC<DropdownProps> = ({ options }) => {
             {options.map((option, index) => (
               <a
                 key={index}
-                href="#"
+                href={`#${index}`}
                 className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white border-b-2 border-black"
               >
                 {option}

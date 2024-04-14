@@ -61,7 +61,8 @@ export default function FranklinAttractions () {
           />
 		  {/* Update: Change for amt of attractions */}
           <div
-            className='relative bottom-96 left-20'
+            className='absolute'
+            style={{ bottom: '44%', left: '67%'}}
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -74,7 +75,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative bottom-80 left-96'
+            className='absolute'
+            style={{ bottom: '35%', left: '55%'}}
             onClick={() => {
               descriptionRefs[1].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -87,7 +89,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative bottom-96 left-116'
+            className='absolute'
+            style={{ bottom: '20%', left: '61%'}}
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -100,7 +103,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{ bottom: '0%', left: '52%'}}
             onClick={() => {
               descriptionRefs[3].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -113,7 +117,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{ bottom: '3%', left: '40%'}}
             onClick={() => {
               descriptionRefs[4].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -126,7 +131,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{ bottom: '22%', left: '43%'}}
             onClick={() => {
               descriptionRefs[5].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -139,7 +145,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{ bottom: '50%', left: '45%'}}
             onClick={() => {
               descriptionRefs[6].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -152,7 +159,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{ bottom: '40%', left: '30%'}}
             onClick={() => {
               descriptionRefs[7].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -165,7 +173,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{ bottom: '15%', left: '30%'}}
             onClick={() => {
               descriptionRefs[8].current?.scrollIntoView({
                 behavior: 'smooth'
