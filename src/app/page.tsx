@@ -6,10 +6,10 @@ import ParkNav from '../components/ParkNav'
 import WelcomePage from '../components/WelcomePage'
 import MapPage from './map/page'
 
-interface Props {}
-
-const App: React.FC<Props> = ({}) => {
-	return <WelcomePage />
+function App() {
+  return (
+    <WelcomePage/>
+  );
 }
 
 export default App
