@@ -41,7 +41,7 @@ export default function BackBayAttractions () {
   const ATTRACTION_START = 25
 
   return (
-    <div className='bg-custom-HistoryBackgroundGreen h-full w-full'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
       <div className='flex justify-center items-center h-screen'>
         <ParkNav page={'Attractions'} park={'back-bay-fens'} />
         {/* TODO: Update menu button to accomodate scrolling */}
@@ -57,7 +57,8 @@ export default function BackBayAttractions () {
           />
           {/* TODO: Update positions of these attractions on the map */}
           <div
-            className='relative bottom-96 left-20'
+            className='relative'
+            style={{top: "10%", left: "10%"} }
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -70,7 +71,7 @@ export default function BackBayAttractions () {
             />
           </div>
           <div
-            className='relative bottom-80 left-96'
+            className='relative'
             onClick={() => {
               descriptionRefs[1].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -84,6 +85,7 @@ export default function BackBayAttractions () {
           </div>
           <div
             className='relative bottom-96 left-116'
+            st
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'

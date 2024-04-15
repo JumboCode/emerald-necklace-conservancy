@@ -28,7 +28,7 @@ export default function ArnArbAttractions () {
   const ATTRACTION_START = 10;
 
   return (
-    <div className='bg-custom-HistoryBackgroundGreen h-full w-full'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
       <div className='flex justify-center items-center h-screen'>
         <ParkNav page={'Attractions'} park={'arnold-arboretum'} />
         <MenuButton2 options={options} />
@@ -65,7 +65,7 @@ export default function ArnArbAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '50%', left: '55%'}}
+            style={{ bottom: '58%', left: '53%'}}
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -73,18 +73,18 @@ export default function ArnArbAttractions () {
             }}
           >
             <SingleAttraction number={ATTRACTION_START + 2} image={'/img/gray_box.jpeg'} />
-            <div
-              className='absolute'
-              style={{ bottom: '55%', left: '60%'}}
-              onClick={() => {
-                console.log(descriptionRefs)
-                descriptionRefs[3].current?.scrollIntoView({
-                  behavior: 'smooth'
-                })
-              }}
-            >
+          </div>
+          <div
+            className='absolute'
+            style={{ bottom: '57%', left: '67%'}}
+            onClick={() => {
+              console.log(descriptionRefs)
+              descriptionRefs[3].current?.scrollIntoView({
+                behavior: 'smooth'
+              })
+            }}
+          >
               <SingleAttraction number={ATTRACTION_START + 3} image={'/img/gray_box.jpeg'} />
-            </div>
           </div>
         </div>
               {/* QUESTRIAL is broken */}
