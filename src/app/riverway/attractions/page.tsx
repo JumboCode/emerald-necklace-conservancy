@@ -34,7 +34,7 @@ export default function RiverwayAttractions () {
   const ATTRACTION_START = 22
 
   return (
-    <div className='bg-custom-HistoryBackgroundGreen h-full w-full'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
       <div className='flex justify-center items-center h-screen'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'riverway'} />
@@ -50,7 +50,8 @@ export default function RiverwayAttractions () {
           />
 		  {/* Update: Change for amt of attractions */}
           <div
-            className='relative bottom-96 left-20'
+            className='absolute'
+            style={{ bottom: '55%', left: '46%'}}
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
