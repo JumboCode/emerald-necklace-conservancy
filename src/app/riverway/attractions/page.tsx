@@ -51,7 +51,7 @@ export default function RiverwayAttractions () {
 		  {/* Update: Change for amt of attractions */}
           <div
             className='absolute'
-            style={{ bottom: '55%', left: '46%'}}
+            style={{ bottom: '53%', left: '47%'}}
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -64,7 +64,8 @@ export default function RiverwayAttractions () {
             />
           </div>
           <div
-            className='relative bottom-80 left-96'
+            className='absolute'
+            style={{ bottom: '64%', left: '65%'}}
             onClick={() => {
               descriptionRefs[1].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -77,7 +78,8 @@ export default function RiverwayAttractions () {
             />
           </div>
           <div
-            className='relative bottom-96 left-116'
+            className='absolute'
+            style={{ bottom: '48%', left: '71%'}}
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'

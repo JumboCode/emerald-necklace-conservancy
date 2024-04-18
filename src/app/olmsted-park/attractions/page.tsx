@@ -44,7 +44,7 @@ export default function FranklinAttractions () {
         {/* <Image className="absolute top-20 right-10" src={menu_icon} alt="Menu Icon" width={150} height={150}/> */}
         <div>
           <Image
-            className='m-auto mt-96'
+            className='m-auto'
             src={bgmap}
             alt='Franklin Park Map' /* Update: New alt */
             width={2048} /* Update: iPad width */
@@ -52,7 +52,8 @@ export default function FranklinAttractions () {
           />
 		  {/* Update: Change for amt of attractions */}
           <div
-            className='relative bottom-96 left-20'
+            className='absolute'
+            style={{ bottom: '54%', left: '4%'}}
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -65,7 +66,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative bottom-80 left-96'
+            className='absolute'
+            style={{ bottom: '45%', left: '17%'}}
             onClick={() => {
               descriptionRefs[1].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -78,7 +80,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative bottom-96 left-116'
+            className='absolute'
+            style={{ bottom: '35%', left: '30%'}}
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -91,7 +94,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{ bottom: '55%', left: '58%'}}
             onClick={() => {
               descriptionRefs[3].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -104,7 +108,8 @@ export default function FranklinAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{ bottom: '36%', left: '47%'}}
             onClick={() => {
               descriptionRefs[4].current?.scrollIntoView({
                 behavior: 'smooth'

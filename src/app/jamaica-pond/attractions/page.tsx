@@ -50,7 +50,7 @@ export default function JamaicaAttractions () {
 		  {/* Update: Change for amt of attractions */}
           <div
             className='absolute'
-            style={{ bottom: '24%', left: '41%'}}
+            style={{ bottom: '22%', left: '41%'}}
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -64,7 +64,7 @@ export default function JamaicaAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '63%', left: '50%'}}
+            style={{ bottom: '53%', left: '49%'}}
             onClick={() => {
               descriptionRefs[1].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -78,7 +78,7 @@ export default function JamaicaAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '38%', left: '62%'}}
+            style={{ bottom: '36%', left: '62%'}}
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'
