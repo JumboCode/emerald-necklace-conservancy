@@ -43,7 +43,7 @@ export default function ArnArbAttractions () {
           />
           <div
             className='absolute'
-            style={{ bottom: '55%', left: '27%'}}
+            style={{ bottom: '47%', left: '22%'}}
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -54,7 +54,7 @@ export default function ArnArbAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '45%', left: '45%'}}
+            style={{ bottom: '40%', left: '40%'}}
             onClick={() => {
               descriptionRefs[1].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -65,7 +65,7 @@ export default function ArnArbAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '58%', left: '53%'}}
+            style={{ bottom: '57%', left: '53%'}}
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -76,7 +76,7 @@ export default function ArnArbAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '57%', left: '67%'}}
+            style={{ bottom: '54%', left: '74%'}}
             onClick={() => {
               console.log(descriptionRefs)
               descriptionRefs[3].current?.scrollIntoView({

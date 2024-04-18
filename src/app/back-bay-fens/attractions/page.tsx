@@ -57,8 +57,8 @@ export default function BackBayAttractions () {
           />
           {/* TODO: Update positions of these attractions on the map */}
           <div
-            className='relative'
-            style={{top: "10%", left: "10%"} }
+            className='absolute'
+            style={{bottom: "37%", left: "9%"}}
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -71,7 +71,8 @@ export default function BackBayAttractions () {
             />
           </div>
           <div
-            className='relative'
+            className='absolute'
+            style={{bottom: "30%", left: "30%"}}
             onClick={() => {
               descriptionRefs[1].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -84,8 +85,8 @@ export default function BackBayAttractions () {
             />
           </div>
           <div
-            className='relative bottom-96 left-116'
-            st
+            className='absolute'
+            style={{bottom: "24%", left: "47%"}}
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -98,7 +99,8 @@ export default function BackBayAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{bottom: "18%", left: "22%"}}
             onClick={() => {
               descriptionRefs[3].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -111,7 +113,8 @@ export default function BackBayAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{bottom: "4%", left: "40%"}}
             onClick={() => {
               descriptionRefs[4].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -124,7 +127,8 @@ export default function BackBayAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{bottom: "34%", left: "62%"}}
             onClick={() => {
               descriptionRefs[5].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -137,7 +141,8 @@ export default function BackBayAttractions () {
             />
           </div>
           <div
-            className='relative left-40 bottom-20'
+            className='absolute'
+            style={{bottom: "29%", left: "78%"}}
             onClick={() => {
               descriptionRefs[6].current?.scrollIntoView({
                 behavior: 'smooth'
