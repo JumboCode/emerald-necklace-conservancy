@@ -23,47 +23,43 @@ const DirectionsContainer: React.FC<DirectionsContainerProps> = ({ parkURL, park
 
 
 	return (
-        <div className="flex items-center justify-center min-h-screen h-screen w-screen bg-custom-HistoryBackgroundGreen z-0 ">
-            <div className="absolute inset-0">
-             <Image src={background} alt="Splash Background" className="absolute w-full h-full object-cover z-1" />
-            </div>
-            <div className="z-2">
-                <div className="pt-64">
-                <div>
-                    <ParkNav page={"Directions"} park={parkName} />
+        <div>                    
+            <ParkNav page={"Directions"} park={parkName} />
+            <div className="flex items-center px-16 pt-64 justify-center min-h-screen h-screen w-screen bg-custom-HistoryBackgroundGreen z-0 ">
+                <div className="absolute inset-0">
+                    <Image src={background} alt="Splash Background" className="absolute w-full h-full object-cover z-1" />
                 </div>
-                <div className="relative w-1/2 h-screen float-left">
-                    <div className="map-container">
-                        <iframe
-                            width="600"
-                            height="450"
-                            loading="lazy"
-                            src={parkURL}>
-                        </iframe>
+                    <div className="relative w-1/2 h-screen float-left">
+                        <div className="map-container">
+                            <iframe
+                                width="600"
+                                height="450"
+                                loading="lazy"
+                                src={parkURL}>
+                            </iframe>
+                        </div>
                     </div>
-                </div>
-                <div className="relative w-1/2 h-screen float-right p-4 space-y-8">
-                    <div>
-                        <h1 className="text-xl">{titleCaseWithSpaces(parkName)}</h1>
-                        <p>Franklin Park is located by the Charles River. Lorem ipsum.</p>
-                    </div>
-                    <div>
-                        <h2 className="text-lg">By Walking</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>
-                    <div> 
-                        <h3 className="text-lg">By Driving</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>
-                    <div>
-                        <h4 className="text-lg">By Transit</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <div className="relative w-1/2 h-screen float-right p-4 space-y-8">
+                        <div>
+                            <h1 className="text-xl">{titleCaseWithSpaces(parkName)}</h1>
+                            <p>Franklin Park is located by the Charles River. Lorem ipsum.</p>
+                        </div>
+                        <div>
+                            <h2 className="text-lg">By Walking</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+                        <div> 
+                            <h3 className="text-lg">By Driving</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+                        <div>
+                            <h4 className="text-lg">By Transit</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </div>
+                </div>
            
-        </div>
 
 	)
 }

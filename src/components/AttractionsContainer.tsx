@@ -1,12 +1,10 @@
-'use client'
-import React from "react"
-import LoadingScreen from "@/components/LoadingScreen"
-import ParkTitle from "@/components/ParkTitle"
-import ParkNav from "@/components/ParkNav"
-import Image from 'next/image'
-import background from '/public/img/white_shapes.png'
-import ImageList from '@/components/ParkImage'; // Make sure to import the new component
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import LoadingScreen from '@/components/LoadingScreen';
+import ParkTitle from '@/components/ParkTitle';
+import ParkNav from '@/components/ParkNav';
+import Image from 'next/image';
+import background from '/public/img/white_shapes.png';
+import ImageList from '@/components/ParkImage';
 
 interface ParkTitleProps {
     park: string;
@@ -16,55 +14,48 @@ interface ParkTitleProps {
 }
 
 const AttractionsContainer: React.FC<ParkTitleProps> = ({ park, bodyText, title, pictures }) => {
-    const [loading, setLoading] = useState(true); // Initialize loading state to true
-      
-    let height: number = (pictures.length * 525) + 150;
+    const [loading, setLoading] = useState(true);
+
+    // Calculate height based on the number of pictures
+    const height: number = (pictures.length * 525) + 150;
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setLoading(false); 
-        }, 500); 
+            setLoading(false);
+        }, 1250);
 
-        return () => {
-            clearTimeout(timer); // Clean up the timer
-        };
+        // Clean up the timer on component unmount
+        return () => clearTimeout(timer);
     }, []);
 
-    return (
-        <div className="bg-custom-HistoryBackgroundGreen ">
-            {loading && <LoadingScreen />}
-            {!loading && (
-                <>
-                    <div className="parallax__fixed">
-                        <ParkNav page={"History"} park={park} />
+    // Screen component encapsulating the layout
+    const Screen = () => (
+        <div className="bg-custom-HistoryBackgroundGreen">
+            <div className="parallax__fixed">
+                <ParkNav page="History" park={park} />
+            </div>
+            <div id="group1" className="parallax parallax__group">
+                <div className="parallax__layer parallax__layer--baseback">
+                    <ParkTitle title={title} bodyText={bodyText} />
+                </div>
+                <div className="parallax__layer parallax__layer--back">
+                    <div className="absolute top-20 w-full">
+                        <ImageList images={pictures} />
                     </div>
-
-                    <div id="group1" className="parallax parallax__group">
-                        <div className="parallax__layer parallax__layer--baseback">
-                            <ParkTitle
-                                title={title}
-                                bodyText={bodyText}
-                            />
-                        </div>
-
-                        <div className="parallax__layer parallax__layer--back">
-                            <div className="absolute top-20 w-full">
-                                <ImageList images={pictures} />
-                            </div>
-                        </div>
-
-                        <div className="parallax__layer parallax__layer--deep flex-grow">
-                            <Image src={background} alt="Splash Background" style={{
-                                width: '100%',
-                                transformOrigin: 'top',
-                                height: `${height}px`
-                            }} />
-                        </div>
-                    </div>
-                </>
-            )}
+                </div>
+                <div className="parallax__layer parallax__layer--deep flex-grow">
+                    <Image src={background} alt="Splash Background" style={{
+                        width: '100%',
+                        transformOrigin: 'top',
+                        height: `${height}px`
+                    }} />
+                </div>
+            </div>
         </div>
     );
+
+    // Conditional rendering based on the loading state
+    return loading ? <LoadingScreen /> : <Screen />;
 }
 
 export default AttractionsContainer;
