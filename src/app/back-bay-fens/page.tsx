@@ -3,22 +3,28 @@
 */
 'use client'
 import React from "react"
-import ParkTitle from "@/components/ParkTitle"
+import AttractionsContainer from '@/components/AttractionsContainer'
 
 export default function BackBayFensHistory() {
+    const pictures = [
+        // Populate this array with your picture objects
+        "/park_images/photo1.jpg",
+        "/park_images/photo2.jpg",
+        "/park_images/photo2.jpg",
+        // ...more pictures
+      ];
+
     return (
-        <div>
-            <ParkTitle
-                title="Back Bay Fens"
-                bodyText="Starting in 1878, Olmsted’s challenge in the Back Bay 
-                        was to restore a stagnant saltwater marsh that flooded 
-                        and threatened public health. Combining landscape 
-                        architecture with sanitary engineering, Olmsted’s 
-                        efforts transformed a foul-smelling tidal creek and 
-                        swamp into a scenic pool within wooded banks; gaining 
-                        interest from the meandering course of the water. 
-                        Olmsted renamed the area the Back Bay Fens.."
-            />
-        </div>
-    )
+        <AttractionsContainer 
+            park="back-bay-fens" 
+            pictures={pictures} 
+            title="Back Bay" 
+            bodyText="Established in 1872, the Arnold Arboretum is open daily 
+                      to the public as a free landscape for the study and 
+                      enjoyment of trees, shrubs, and vines. As North America's 
+                      first public arboretum and a National Historic Landmark, 
+                      it is owned by the City of Boston and managed by Harvard 
+                      University under a 1,000-year lease signed in 1882."
+        />
+    );
 }
