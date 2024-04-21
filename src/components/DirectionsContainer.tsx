@@ -1,24 +1,19 @@
 'use client';
-
 import React from "react";
 import ParkNav from "./ParkNav";
 import Image from 'next/image';
 import background from '/public/directions_bg.png';
-
 interface DirectionsContainerProps {
     parkURL: string;
     parkName: string;
 }
-
 const DirectionsContainer: React.FC<DirectionsContainerProps> = ({ parkURL, parkName }) => {
-    
     function titleCaseWithSpaces(input: string): string {
         return input
             .split('-')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitalize the first letter of each word
             .join(' '); // Rejoin the words with spaces
     }
-
     return (
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
             <ParkNav page={"Directions"} park={parkName} />
@@ -28,13 +23,13 @@ const DirectionsContainer: React.FC<DirectionsContainerProps> = ({ parkURL, park
                 </div>
                 <div className="relative w-1/2 h-full flex justify-center items-center">
                     <iframe
-                        className="w-1/2 h-3/4"
+                        className="w-full h-3/5 px-12"
                         src={parkURL}
                         frameBorder="0"
                         loading="lazy">
                     </iframe>
                 </div>
-                <div className="relative w-1/2 h-full flex flex-col space-y-8 text-center p-16 overflow-auto pt-40 text-[#567534] text-lg">
+                <div className="relative w-1/2 h-full flex flex-col space-y-8 text-center p-16 overflow-auto pt-32 text-[#567534] text-lg">
                     <div>
                         <h1 className="text-3xl pb-4">{titleCaseWithSpaces(parkName)}</h1>
                         <p>Franklin Park is located by the Charles River. Lorem ipsum.</p>
@@ -56,5 +51,4 @@ const DirectionsContainer: React.FC<DirectionsContainerProps> = ({ parkURL, park
         </div>
     );
 }
-
 export default DirectionsContainer;
