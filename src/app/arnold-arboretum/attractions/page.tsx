@@ -95,7 +95,7 @@ export default function ArnArbAttractions () {
 
       <div className='bg-custom-HistoryBackgroundGreen w-full'>
         {' '}
-        <div ref={descriptionRefs[0]}>
+        <div ref={descriptionRefs[0]} id='0'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 0}
             attractionName={'Peters Hill'}
@@ -107,7 +107,7 @@ export default function ArnArbAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[1]}>
+        <div ref={descriptionRefs[1]} id='1'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 1}
             attractionName={'Explorers Garden'}
@@ -121,7 +121,7 @@ export default function ArnArbAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[2]}>
+        <div ref={descriptionRefs[2]} id='2'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 2}
             attractionName={'Larz Anderson Bonsai Collection'}
@@ -132,7 +132,7 @@ export default function ArnArbAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[3]}>
+        <div ref={descriptionRefs[3]} id='3'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 3}
             attractionName={'Hunnewell Building'}

@@ -163,7 +163,7 @@ export default function BackBayAttractions () {
 
       <div className='bg-custom-HistoryBackgroundGreen w-full'>
         {' '}
-        <div ref={descriptionRefs[0]}>
+        <div ref={descriptionRefs[0]} id='0'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 0}
             attractionName={'Athletic Facilities'}
@@ -175,7 +175,7 @@ export default function BackBayAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[1]}>
+        <div ref={descriptionRefs[1]} id='1'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 1}
             attractionName={'James P. Kelleher Rose Garden'}
@@ -188,7 +188,7 @@ export default function BackBayAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[2]}>
+        <div ref={descriptionRefs[2]} id='2'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 2}
             attractionName={'War Memorials'}
@@ -198,7 +198,7 @@ export default function BackBayAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[3]}>
+        <div ref={descriptionRefs[3]} id='3'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 3}
             attractionName={'Japanese Bell'}
@@ -210,7 +210,7 @@ export default function BackBayAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[4]}>
+        <div ref={descriptionRefs[4]} id='4'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 4}
             attractionName={'Shattuck Emerald Necklace Visitor Center'}
@@ -223,7 +223,7 @@ export default function BackBayAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[5]}>
+        <div ref={descriptionRefs[5]} id='5'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 5}
             attractionName={'Fenway Victory Gardens'}
@@ -236,7 +236,7 @@ export default function BackBayAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[6]}>
+        <div ref={descriptionRefs[6]} id='6'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 6}
             attractionName={'Boylston Bridge'}
