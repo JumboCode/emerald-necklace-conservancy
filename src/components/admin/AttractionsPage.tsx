@@ -59,12 +59,12 @@ const AttractionPage: React.FC<Props> = ({ park }) => {
 			<div className="w-full bg-[#333333] h-full mt-28">
 				<div className="flex flex-row bg-enc-yellow items-center">
 					<Title title={`${park.name} - Attractions`} />
-					<button
+					{/* <button
 						onClick={addAttraction}
 						className="bg-white rounded-md  hover:bg-enc-light-green h-min font-questrial text-black text-center w-32 mr-5 p-2"
 					>
 						Add Attraction
-					</button>
+					</button> */}
 				</div>
 				<form action={save} method="POST" id={park.slug}>
 					{attractions
