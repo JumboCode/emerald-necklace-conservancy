@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Arrow from '@/assets/arrow.png'
 import ArrowDown from '@/assets/arrow-down.png'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 interface MenuItemProps {
 	label: string
@@ -11,12 +13,16 @@ interface MenuItemProps {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ label, url }) => {
+	const pathname = usePathname()
+
 	const [open, setOpen] = React.useState(false)
 	return (
-		<div className="transition-all duration-200">
+		<div className="">
 			<button
 				onClick={() => setOpen(!open)}
-				className="w-full h-20 flex items-center justify-start border-b  font-questrial text-xl font-thin text-enc-green hover:bg-enc-yellow border-r border-enc-green"
+				className={`w-full h-20 flex items-center justify-start border-b  font-questrial text-xl font-thin text-enc-green hover:bg-enc-light-green border-r border-enc-green ${
+					isActive(pathname, url) && 'bg-enc-yellow'
+				}`}
 			>
 				<div className="w-12">
 					{open ? (
@@ -40,10 +46,18 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, url }) => {
 				<span className="ml-4">{label}</span>
 			</button>
 			{open && (
-				<div className="flex flex-col">
+				<motion.div
+					initial={{ height: 0 }}
+					animate={{ height: 'auto' }}
+					transition={{ duration: 0.2 }}
+					className="flex flex-col"
+				>
 					<Link
 						href={`${url}/history`}
-						className="w-full h-20 text-left pl-20 border-b font-questrial text-xl font-thin text-enc-green hover:bg-enc-yellow border-r border-enc-green"
+						className={`w-full h-20 text-left pl-20 border-b font-questrial text-xl font-thin text-enc-green hover:bg-enc-light-green border-r border-enc-green ${
+							subPageActive(pathname, url, 'history') &&
+							'bg-enc-yellow'
+						}`}
 					>
 						<span className="ml-4 h-full flex items-center">
 							History
@@ -51,7 +65,10 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, url }) => {
 					</Link>
 					<Link
 						href={`${url}/attractions`}
-						className="w-full h-20 text-left pl-20 border-b font-questrial text-xl font-thin text-enc-green hover:bg-enc-yellow border-r border-enc-green"
+						className={`w-full h-20 text-left pl-20 border-b font-questrial text-xl font-thin text-enc-green hover:bg-enc-light-green border-r border-enc-green ${
+							subPageActive(pathname, url, 'attractions') &&
+							'bg-enc-yellow'
+						}`}
 					>
 						<span className="ml-4 h-full flex items-center">
 							Attractions
@@ -59,16 +76,28 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, url }) => {
 					</Link>
 					<Link
 						href={`${url}/directions`}
-						className="w-full h-20 text-left pl-20 border-b font-questrial text-xl font-thin text-enc-green hover:bg-enc-yellow border-r border-enc-green"
+						className={`w-full h-20 text-left pl-20 border-b font-questrial text-xl font-thin text-enc-green hover:bg-enc-light-green border-r border-enc-green ${
+							subPageActive(pathname, url, 'directions') &&
+							'bg-enc-yellow'
+						}`}
 					>
 						<span className="ml-4 h-full flex items-center">
 							Directions
 						</span>
 					</Link>
-				</div>
+				</motion.div>
 			)}
 		</div>
 	)
 }
 
 export default MenuItem
+
+function isActive(pathname: string, url: string) {
+	console.log(`checking pathname: ${pathname}, url: ${url}`)
+	return pathname.includes(url)
+}
+
+function subPageActive(pathname: string, url: string, subPage: string) {
+	return pathname.includes(url) && pathname.includes(subPage)
+}

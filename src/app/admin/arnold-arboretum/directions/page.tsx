@@ -5,7 +5,7 @@ import DirectionsPage from '@/components/admin/DirectionsPage'
 interface Props {}
 
 const Directions: React.FC<Props> = async ({}) => {
-	const park = await getPark('franklin-park')
+	const park = await getPark('arnold-arboretum')
 
 	return <DirectionsPage park={park} />
 }

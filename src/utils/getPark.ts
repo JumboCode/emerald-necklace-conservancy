@@ -30,6 +30,9 @@ const getPark = async (parkSlug: string): Promise<ParkT> => {
 		name: parkDoc.name,
 		slug: parkDoc.slug,
 		history: parkDoc.history,
+		popup: parkDoc.popup,
+		directions: parkDoc.directions,
+		attractions: parkDoc.attractions,
 	}
 }
 

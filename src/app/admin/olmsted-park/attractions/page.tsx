@@ -7,7 +7,7 @@ import getPark from '@/utils/getPark'
 interface Props {}
 
 const Attractions: React.FC<Props> = async ({}) => {
-	const park = await getPark('franklin-park')
+	const park = await getPark('olmsted-park')
 
 	return <AttractionsPage park={park} />
 }

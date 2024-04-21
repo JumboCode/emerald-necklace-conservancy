@@ -1,12 +1,12 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import Layout from './main-layout'
 import Section from '@/components/admin/Section'
 import { ParkT } from '@/types'
 import updateHistory from '@/actions/updateHistory'
 import Status from '@/components/admin/Status'
 import Title from '@/components/admin/Title'
+import MenuBar from '@/components/admin/MenuBar'
 
 interface Props {
 	park: ParkT
@@ -25,8 +25,12 @@ const HistoryPage: React.FC<Props> = ({ park }) => {
 	}
 
 	return (
-		<Layout id={park.slug} saving={saving}>
-			<div className="w-full bg-[#333333]">
+		<div className="h-full w-full">
+			<div className="w-5/6 fixed top-0 h-28 right-0">
+				<MenuBar id={park.slug} saving={saving} />
+			</div>
+
+			<div className="w-full bg-[#333333] h-full mt-28">
 				<Title title={`${park.name} - History`} />
 				<form action={save} method="POST" id={park.slug}>
 					<Section
@@ -49,7 +53,7 @@ const HistoryPage: React.FC<Props> = ({ park }) => {
 					</div>
 				</div>
 			</div>
-		</Layout>
+		</div>
 	)
 }
 
