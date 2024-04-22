@@ -14,7 +14,7 @@ import SingleAttraction from '@/components/SingleAttraction'
 import AttractionInformation from '@/components/AttractionInformation'
 import { useRef } from 'react'
 
-export default function FranklinAttractions () {
+export default function OlmstedAttractions () {
   /* Update for location */
   const options = [
     "Ward's Pond",
@@ -132,7 +132,7 @@ export default function FranklinAttractions () {
       <div className='bg-custom-HistoryBackgroundGreen w-full'>
         {' '}
 		{/* Update refs here */}
-        <div ref={descriptionRefs[0]}>
+        <div ref={descriptionRefs[0]} id='0'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 0}
             attractionName={"Ward's Pond"}
@@ -143,7 +143,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[1]}>
+        <div ref={descriptionRefs[1]} id='1'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 1}
             attractionName={'Wildflower Meadow'}
@@ -153,7 +153,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[2]}>
+        <div ref={descriptionRefs[2]} id='2'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 2}
             attractionName={'Daisy Field'}
@@ -164,7 +164,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[3]}>
+        <div ref={descriptionRefs[3]} id='3'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 3}
             attractionName={'Allerton Overlook'}
@@ -174,7 +174,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[4]}>
+        <div ref={descriptionRefs[4]} id='4'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 4}
             attractionName={'Leverett Pond'}

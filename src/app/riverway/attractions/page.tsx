@@ -102,7 +102,7 @@ export default function RiverwayAttractions () {
       <div className='bg-custom-HistoryBackgroundGreen w-full'>
         {' '}
 		{/* Update refs here */}
-        <div ref={descriptionRefs[0]}>
+        <div ref={descriptionRefs[0]} id='0'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 0}
             attractionName={'Bellevue Street Bridge'}
@@ -112,7 +112,7 @@ export default function RiverwayAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[1]}>
+        <div ref={descriptionRefs[1]} id='1'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 1}
             attractionName={'Chapel Street Bridge Area/Historic Bridle Paths'}
@@ -124,7 +124,7 @@ export default function RiverwayAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[2]}>
+        <div ref={descriptionRefs[2]} id='2'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 2}
             attractionName={'Round House Shelter'}
