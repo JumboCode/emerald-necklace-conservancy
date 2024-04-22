@@ -14,7 +14,7 @@ const MenuButton2: React.FC<DropdownProps> = ({ options }) => {
     };
   
     return (
-      <div className="fixed top-20 right-0 mt-4 mr-4">
+      <div className="fixed top-20 right-0 mt-4 mr-4 z-10">
         <div className="relative">
         <button
           className="rounded inline-flex items-center"

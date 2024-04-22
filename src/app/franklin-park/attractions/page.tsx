@@ -49,7 +49,7 @@ export default function FranklinAttractions () {
       <div className='flex justify-center items-center h-screen'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'franklin-park'} />
-        <MenuButton2 options={options} />
+        <MenuButton2 options={options}/>
         {/* <Image className="absolute top-20 right-10" src={menu_icon} alt="Menu Icon" width={150} height={150}/> */}
         <div>
           <Image
