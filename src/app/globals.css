@@ -99,7 +99,7 @@ p {
 
 .parallax {
     perspective: 1px;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
