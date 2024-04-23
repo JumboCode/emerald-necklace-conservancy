@@ -197,7 +197,7 @@ export default function FranklinAttractions () {
       <div className='bg-custom-HistoryBackgroundGreen w-full'>
         {' '}
 		{/* Update refs here */}
-        <div ref={descriptionRefs[0]}>
+        <div ref={descriptionRefs[0]} id='0'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 0}
             attractionName={'White Stadium'}
@@ -209,7 +209,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[1]}>
+        <div ref={descriptionRefs[1]} id='1'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 1}
             attractionName={'Overlook Shelter Ruins'}
@@ -221,7 +221,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[2]}>
+        <div ref={descriptionRefs[2]} id='2'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 2}
             attractionName={'The Playstead'}
@@ -231,7 +231,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[3]}>
+        <div ref={descriptionRefs[3]} id='3'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 3}
             attractionName={'Franklin Park Zoo'}
@@ -244,7 +244,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[4]}>
+        <div ref={descriptionRefs[4]} id='4'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 4}
             attractionName={'William J. Devine Golf Course'}
@@ -255,7 +255,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[5]}>
+        <div ref={descriptionRefs[5]} id='5'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 5}
             attractionName={'Schoolmaster Hill'}
@@ -267,7 +267,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[6]}>
+        <div ref={descriptionRefs[6]} id='6'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 6}
             attractionName={'The Wilderness'}
@@ -278,7 +278,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[7]}>
+        <div ref={descriptionRefs[7]} id='7'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 7}
             attractionName={'The 99 Steps/Ellicot Arch'}
@@ -291,7 +291,7 @@ export default function FranklinAttractions () {
             }
           />
         </div>
-        <div ref={descriptionRefs[8]}>
+        <div ref={descriptionRefs[8]} id='8'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 8}
             attractionName={'Scarboro Pond and Hill'}
