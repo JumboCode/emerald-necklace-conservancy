@@ -29,14 +29,16 @@ export default function ArnArbAttractions () {
   const ATTRACTION_START = 10;
 
   return (
-    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full' id='top'>
-      <div className='flex justify-center items-center h-screen'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
+      <div id="group1" class="parallax parallax__group">
+      <div className='justify-center items-center h-screen'>
         <ParkNav page={'Attractions'} park={'arnold-arboretum'} />
-        <MenuButton2 options={options} />
+        
         {/* <Image className="absolute top-20 right-10" src={menu_icon} alt="Menu Icon" width={150} height={150}/> */}
-        <div>
+        <div className="parallax__fixed fixed">
           <Image
-            className='m-auto'
+            className='m-auto flex justify-center items-center'
+            style={{ transform: 'translate(25%, 10%);'}}
             src={arnoldmap}
             alt='Arnold Arboretum Map'
             width={800}
@@ -44,7 +46,7 @@ export default function ArnArbAttractions () {
           />
           <div
             className='absolute'
-            style={{ bottom: '47%', left: '22%'}}
+            style={{ bottom: '37%', left: '37%'}}
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -55,7 +57,7 @@ export default function ArnArbAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '40%', left: '40%'}}
+            style={{ bottom: '30%', left: '65%'}}
             onClick={() => {
               descriptionRefs[1].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -66,7 +68,7 @@ export default function ArnArbAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '57%', left: '53%'}}
+            style={{ bottom: '55%', left: '78%'}}
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -77,7 +79,7 @@ export default function ArnArbAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '54%', left: '74%'}}
+            style={{ bottom: '44%', left: '84%', transform: 'translate(150%, 0%);'}}
             onClick={() => {
               console.log(descriptionRefs)
               descriptionRefs[3].current?.scrollIntoView({
@@ -88,15 +90,19 @@ export default function ArnArbAttractions () {
               <SingleAttraction number={ATTRACTION_START + 3} image={'/img/gray_box.jpeg'} />
           </div>
         </div>
+
               {/* QUESTRIAL is broken */}
         <p className='text-white font-orelega text-6xl absolute bottom-0 left-0 ml-10 mb-20'>
           Arnold Arboretum{' '}
         </p>
-      </div>
+      
 
-      <div className='bg-custom-HistoryBackgroundGreen w-full'>
+
+      <div id="group1" class="parallax parallax__group" className='bg-custom-HistoryBackgroundGreen w-full'>
+        <div class="h-[50vh]"> 
+        </div>
         {' '}
-        <div ref={descriptionRefs[0]} id='0'>
+        <div class="parallax__layer parallax__layer--base" ref={descriptionRefs[0]} id='0'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 0}
             attractionName={'Peters Hill'}
@@ -148,8 +154,10 @@ export default function ArnArbAttractions () {
           />
         </div>
         {/* Lengthen page */}
-        <BacktoTopButton />
       </div>
+      <MenuButton2 options={options} />
+    </div>
+    </div>
     </div>
   )
 }

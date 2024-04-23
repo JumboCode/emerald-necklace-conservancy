@@ -59,8 +59,9 @@ export default function JamaicaAttractions () {
   const ATTRACTION_START = 14
 
   return (
-    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full' id='top'>
-      <div className='flex justify-center items-center h-screen'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
+      <div id="group1" class="parallax parallax__group">
+      <div className='top-0 justify-center items-center'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'jamaica-pond'} />
         

@@ -35,13 +35,14 @@ export default function RiverwayAttractions () {
   const ATTRACTION_START = 22
 
   return (
-    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full' id='top'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
+      <div id="group1" class="parallax parallax__group">
       <div className='flex justify-center items-center h-screen'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'riverway'} />
-        <MenuButton2 options={options} />
+        
         {/* <Image className="absolute top-20 right-10" src={menu_icon} alt="Menu Icon" width={150} height={150}/> */}
-        <div>
+        <div className="parallax__fixed fixed">
           <Image
             className='m-auto mt-96'
             src={bgmap}
@@ -98,9 +99,13 @@ export default function RiverwayAttractions () {
           {/* Update: Name */}
 		  Riverway{' '}
         </p>
-      </div>
+      
 
-      <div className='bg-custom-HistoryBackgroundGreen w-full'>
+
+
+      <div id="group1" class="parallax parallax__group" className='bg-custom-HistoryBackgroundGreen w-full'>
+        <div class="h-[50vh]"> 
+        </div>
         {' '}
 		{/* Update refs here */}
         <div ref={descriptionRefs[0]} id='0'>
@@ -135,8 +140,10 @@ export default function RiverwayAttractions () {
           />
         </div>
         {/* Lengthen page */}
-        <BacktoTopButton />
       </div>
+      <MenuButton2 options={options} />
+    </div>
+    </div>
     </div>
   )
 }
