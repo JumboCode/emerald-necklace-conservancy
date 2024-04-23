@@ -1,7 +1,7 @@
 'use client'
 import '../globals.css'
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import MapPin from '@/components/MapPin'
 import ParkName from '@/components/ParkName'
@@ -48,10 +48,10 @@ export default function MapPage () {
     new Array(park.Back_Bay + 1).fill(false)
 
   )
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      let clickIsInModal = false
-      document.querySelectorAll('[data-modal]').forEach(el => {
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+        let clickIsInModal = false
+        document.querySelectorAll('[data-modal]').forEach(el => {
         if (event.target && el.contains(event.target as Node)) {
           clickIsInModal = true;
         }
