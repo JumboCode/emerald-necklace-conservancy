@@ -63,7 +63,7 @@ export default function JamaicaAttractions () {
       <div className='flex justify-center items-center h-screen'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'jamaica-pond'} />
-        <MenuButton2 options={options} />
+        
         {/* <Image className="absolute top-20 right-10" src={menu_icon} alt="Menu Icon" width={150} height={150}/> */}
         <div className="parallax__fixed fixed">
             {/*  style={{
@@ -121,6 +121,7 @@ export default function JamaicaAttractions () {
             />
           </div>
         </div>
+        
         {/* QUESTRIAL is broken */}
         <p className='text-white font-orelega text-6xl absolute bottom-0 left-0 ml-10 mb-20'>
           {/* Update: Name */}
@@ -174,6 +175,7 @@ export default function JamaicaAttractions () {
         {/* Lengthen page */}
         <BacktoTopButton />
       </div>
+      <MenuButton2 options={options} />
     </div>
   )
 }
