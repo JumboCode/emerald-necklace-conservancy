@@ -64,7 +64,7 @@ export default function JamaicaAttractions () {
   return (
     <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
       <div id="group1" class="parallax parallax__group">
-      <div className='top-0 justify-center  items-center'>
+      <div className='top-0 justify-center items-center'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'jamaica-pond'} />
         

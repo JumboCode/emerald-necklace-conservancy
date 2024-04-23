@@ -46,14 +46,15 @@ export default function FranklinAttractions () {
 
   return (
     <div className='bg-custom-HistoryBackgroundGreen h-full w-full'>
-      <div className='flex justify-center items-center h-screen'>
+      <div id="group1" class="parallax parallax__group">
+      <div className='flex top-0 justify-center items-center h-screen'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'franklin-park'} />
-        <MenuButton2 options={options} />
+        
         {/* <Image className="absolute top-20 right-10" src={menu_icon} alt="Menu Icon" width={150} height={150}/> */}
-        <div>
+        <div className="parallax__fixed fixed">
           <Image
-            className='m-auto mt-80'
+            className='m-auto'
             src={bgmap}
             alt='Franklin Park Map' /* Update: New alt */
             width={600} /* Update: iPad width */
@@ -62,7 +63,7 @@ export default function FranklinAttractions () {
 		  {/* Update: Change for amt of attractions */}
           <div
             className='absolute'
-            style={{ bottom: '42%', left: '73%'}}
+            style={{ bottom: '72%', left: '73%'}}
             onClick={() => {
               descriptionRefs[0].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -76,7 +77,7 @@ export default function FranklinAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '30%', left: '55%'}}
+            style={{ bottom: '50%', left: '55%'}}
             onClick={() => {
               descriptionRefs[1].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -90,7 +91,7 @@ export default function FranklinAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '13%', left: '64%'}}
+            style={{ bottom: '30%', left: '64%'}}
             onClick={() => {
               descriptionRefs[2].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -104,7 +105,7 @@ export default function FranklinAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '-6%', left: '55%'}}
+            style={{ bottom: '6%', left: '55%'}}
             onClick={() => {
               descriptionRefs[3].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -118,7 +119,7 @@ export default function FranklinAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '-4%', left: '33%'}}
+            style={{ bottom: '4%', left: '30%'}}
             onClick={() => {
               descriptionRefs[4].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -132,7 +133,7 @@ export default function FranklinAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '20%', left: '36%'}}
+            style={{ bottom: '40%', left: '30%'}}
             onClick={() => {
               descriptionRefs[5].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -146,7 +147,7 @@ export default function FranklinAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '47%', left: '40%'}}
+            style={{ bottom: '77%', left: '40%'}}
             onClick={() => {
               descriptionRefs[6].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -160,7 +161,7 @@ export default function FranklinAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '39%', left: '22%'}}
+            style={{ bottom: '67%', left: '6%'}}
             onClick={() => {
               descriptionRefs[7].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -174,7 +175,7 @@ export default function FranklinAttractions () {
           </div>
           <div
             className='absolute'
-            style={{ bottom: '12%', left: '20%'}}
+            style={{ bottom: '27%', left: '2%'}}
             onClick={() => {
               descriptionRefs[8].current?.scrollIntoView({
                 behavior: 'smooth'
@@ -187,17 +188,21 @@ export default function FranklinAttractions () {
             />
           </div>
         </div>
+
         {/* QUESTRIAL is broken */}
         <p className='text-white font-orelega text-6xl absolute bottom-0 left-0 ml-10 mb-20'>
           {/* Update: Name */}
 		  Franklin Park{' '}
         </p>
-      </div>
 
-      <div className='bg-custom-HistoryBackgroundGreen w-full'>
+
+
+      <div id="group1" class="parallax parallax__group" className='bg-custom-HistoryBackgroundGreen w-full'>
+        <div class="h-[50vh]"> 
+        </div>
         {' '}
 		{/* Update refs here */}
-        <div ref={descriptionRefs[0]} id='0'>
+        <div class="parallax__layer parallax__layer--base" ref={descriptionRefs[0]} id='0'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 0}
             attractionName={'White Stadium'}
@@ -307,6 +312,9 @@ export default function FranklinAttractions () {
         </div>
         {/* Lengthen page */}
       </div>
+      <MenuButton2 options={options} />
+    </div>
+    </div>
     </div>
   )
 }
