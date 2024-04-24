@@ -14,6 +14,7 @@ import MenuButton2 from '@/components/MenuButton2'
 import SingleAttraction from '@/components/SingleAttraction'
 import AttractionInformation from '@/components/AttractionInformation'
 import { useRef } from 'react'
+import BacktoTopButton from '@/components/BacktoTopButton'
 
 export default function JamaicaAttractions () {
   /* Update for location */
