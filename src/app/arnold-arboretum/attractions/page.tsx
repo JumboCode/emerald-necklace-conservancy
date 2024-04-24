@@ -28,7 +28,7 @@ export default function ArnArbAttractions () {
   const ATTRACTION_START = 10;
 
   return (
-    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full' id='top'>
       <div className='flex justify-center items-center h-screen'>
         <ParkNav page={'Attractions'} park={'arnold-arboretum'} />
         <MenuButton2 options={options} />
@@ -147,6 +147,7 @@ export default function ArnArbAttractions () {
           />
         </div>
         {/* Lengthen page */}
+        <BacktoTopButton />
       </div>
     </div>
   )

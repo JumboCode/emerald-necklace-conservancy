@@ -15,6 +15,8 @@ import SingleAttraction from '@/components/SingleAttraction'
 import AttractionInformation from '@/components/AttractionInformation'
 import { useRef } from 'react'
 
+import BacktoTopButton from '@/components/BacktoTopButton'
+
 export default function FranklinAttractions () {
   /* Update for location */
   const options = [
@@ -45,7 +47,7 @@ export default function FranklinAttractions () {
   const ATTRACTION_START = 1
 
   return (
-    <div className='bg-custom-HistoryBackgroundGreen h-full w-full'>
+    <div className='bg-custom-HistoryBackgroundGreen h-full w-full' id='top'>
       <div className='flex justify-center items-center h-screen'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'franklin-park'} />
@@ -306,6 +308,7 @@ export default function FranklinAttractions () {
           />
         </div>
         {/* Lengthen page */}
+          <BacktoTopButton />
       </div>
     </div>
   )

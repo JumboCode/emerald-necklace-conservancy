@@ -41,7 +41,7 @@ export default function BackBayAttractions () {
   const ATTRACTION_START = 25
 
   return (
-    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full' id='top'>
       <div className='flex justify-center items-center h-screen'>
         <ParkNav page={'Attractions'} park={'back-bay-fens'} />
         {/* TODO: Update menu button to accomodate scrolling */}
@@ -248,6 +248,7 @@ export default function BackBayAttractions () {
           />
         </div>
         {/* Lengthen page */}
+        <BacktoTopButton />
       </div>
     </div>
   )

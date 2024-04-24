@@ -33,7 +33,7 @@ export default function JamaicaAttractions () {
   const ATTRACTION_START = 14
 
   return (
-    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full' id='top'>
       <div className='flex justify-center items-center h-screen'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'jamaica-pond'} />
@@ -138,6 +138,7 @@ export default function JamaicaAttractions () {
           />
         </div>
         {/* Lengthen page */}
+        <BacktoTopButton />
       </div>
     </div>
   )

@@ -34,7 +34,7 @@ export default function RiverwayAttractions () {
   const ATTRACTION_START = 22
 
   return (
-    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full' id='top'>
       <div className='flex justify-center items-center h-screen'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'riverway'} />
@@ -134,6 +134,7 @@ export default function RiverwayAttractions () {
           />
         </div>
         {/* Lengthen page */}
+        <BacktoTopButton />
       </div>
     </div>
   )
