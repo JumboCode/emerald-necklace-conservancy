@@ -13,6 +13,7 @@ import MenuButton2 from '@/components/MenuButton2'
 import SingleAttraction from '@/components/SingleAttraction'
 import AttractionInformation from '@/components/AttractionInformation'
 import { useRef } from 'react'
+import BacktoTopButton from '@/components/BacktoTopButton'
 
 export default function OlmstedAttractions () {
   /* Update for location */
@@ -36,7 +37,7 @@ export default function OlmstedAttractions () {
   const ATTRACTION_START = 17
 
   return (
-    <div className='bg-custom-HistoryBackgroundGreen h-full w-full'>
+    <div className='bg-custom-HistoryBackgroundGreen h-full w-full' id='top'>
       <div className='flex justify-center items-center h-screen'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'franklin-park'} />
@@ -187,6 +188,7 @@ export default function OlmstedAttractions () {
           />
         </div>
         {/* Lengthen page */}
+        <BacktoTopButton />
       </div>
     </div>
   )

@@ -15,6 +15,7 @@ import MenuButton2 from '@/components/MenuButton2'
 import SingleAttraction from '@/components/SingleAttraction'
 import AttractionInformation from '@/components/AttractionInformation'
 import { useRef } from 'react'
+import BacktoTopButton from '@/components/BacktoTopButton'
 
 export default function RiverwayAttractions () {
   /* Update for location */
@@ -34,7 +35,7 @@ export default function RiverwayAttractions () {
   const ATTRACTION_START = 22
 
   return (
-    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full' id='top'>
       <div className='flex justify-center items-center h-screen'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'riverway'} />
@@ -134,6 +135,7 @@ export default function RiverwayAttractions () {
           />
         </div>
         {/* Lengthen page */}
+        <BacktoTopButton />
       </div>
     </div>
   )
