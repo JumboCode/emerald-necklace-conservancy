@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 /* Update paths that need authentication here */
 export const config = {
-	matcher: ['/admin'],
+	matcher: ['/admin/:path*'],
 }
 
 export function middleware(req: NextRequest) {

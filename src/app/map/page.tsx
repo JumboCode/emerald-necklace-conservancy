@@ -5,6 +5,9 @@ import { useState, useEffect } from 'react'
 import MapPin from '@/components/MapPin'
 import ParkName from '@/components/ParkName'
 import ParkModal from '@/components/ParkModal'
+
+import MapButton from '@/components/MapButton'
+
 interface ModalsState {
   park1: boolean
   park2: boolean
@@ -66,9 +69,10 @@ export default function MapPage () {
   
   return (
     <div className="bg-map bg-cover bg-center min-h-screen w-full flex items-center justify-center object-cover">
-      {/* <div>
+      <div>
     <MapButton></MapButton>
-    </div> */}
+    </div>
+  
       <div className='absolute' style={{ top: '40px', left: '15px' }}>
         <img src='/map_images/dove_tree.png' alt='Dove Tree' width={160} />
       </div>

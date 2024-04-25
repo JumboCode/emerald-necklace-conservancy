@@ -21,12 +21,11 @@
 }
 
 body {
-	@apply object-cover bg-cover bg-center h-screen flex items-center justify-center;
-	/* removed max-w-screen-2xl -- admin page needs to be full-width*/
+	@apply object-cover max-w-screen-2xl bg-cover bg-center h-screen flex items-center justify-center;
 }
 
 p {
-	font-family: 'questrial', 'sans-serif';
+	font-family: "questrial", "sans-serif";
 }
 
 .button {
