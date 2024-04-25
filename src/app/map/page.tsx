@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import MapPin from '@/components/MapPin'
 import ParkName from '@/components/ParkName'
 import ParkModal from '@/components/ParkModal'
+
 import MapButton from '@/components/MapButton'
 
 interface ModalsState {
@@ -15,7 +16,6 @@ interface ModalsState {
   park5: boolean
   park6: boolean
 }
-
 const initialState: ModalsState = {
   park1: false,
   park2: false,
@@ -24,7 +24,6 @@ const initialState: ModalsState = {
   park5: false,
   park6: false
 }
-
 enum park {
   Franklin_Park,
   Arnold_Arboretum,
@@ -33,7 +32,6 @@ enum park {
   Riverway,
   Back_Bay
 }
-
 const text: string[] = [
   'At 527 acres, Franklin Park is the largest park in the Emerald Necklace. Named for Benjamin Franklin, the park brings together rural scenery, spectacular rock outcroppings, a woodland preserve, expansive pastoral vistas and an area for active recreation and sports.',
   'Established in 1872, the Arnold Arboretum is open daily to the public as a free landscape for the study and enjoyment of trees, shrubs, and vines. The Arboretum is both a beautiful landscape of mature plants and a site for vital scientific research.',
@@ -42,12 +40,11 @@ const text: string[] = [
   'The Riverway, which serves as a border between Boston and Brookline, is a narrow 34-acre park with paths that follow the meandering course of the Muddy River. With more than 100,000 plantings, it is home to some of the most beautiful bridges in the Emerald Necklace.',
   'The Back Bay Fens is an eclectic mix of formal and community gardens, ball fields, memorials and historic structures. With places for passive recreation and active pursuits, the park offers a range of experiences such as gardening and sports and is a popular spot for birders.'
 ]
-
 export default function MapPage () {
   const [open, setOpen] = useState<boolean[]>(
     new Array(park.Back_Bay + 1).fill(false)
-
   )
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       let clickIsInModal = false
@@ -69,7 +66,7 @@ export default function MapPage () {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [open]);
-
+  
   return (
     <div className="bg-map bg-cover bg-center min-h-screen w-full flex items-center justify-center object-cover">
       <div>
@@ -77,7 +74,6 @@ export default function MapPage () {
     </div>
   
       <div className='absolute' style={{ top: '40px', left: '15px' }}>
-
         <img src='/map_images/dove_tree.png' alt='Dove Tree' width={160} />
       </div>
       <div className='absolute' style={{ top: '115px', left: '250px' }}>
@@ -110,7 +106,7 @@ export default function MapPage () {
       <div className='absolute' style={{ bottom: '120px', left: '320px' }}>
         <MapPin size={75} />
       </div>
-      <div className='absolute' style={{ left: '0px', top: '240px' }}>
+      <div className={`absolute z-${open[1] ? 10 : 0}`} style={{ left: '0px', top: '240px' }}>
         <ParkName
           name={'Arnold Arboretum'}
           text={text[park.Arnold_Arboretum]}
@@ -119,7 +115,7 @@ export default function MapPage () {
           index={park.Arnold_Arboretum}
         />
       </div>
-      <div className='absolute' style={{ right: '45px', top: '470px' }}>
+      <div className={`absolute z-${open[5] ? 10 : 0}`} style={{ right: '45px', top: '470px'}}>
         <ParkName
           name={'Back Bay Fens'}
           text={text[park.Back_Bay]}
@@ -131,7 +127,7 @@ export default function MapPage () {
       <div className='absolute' style={{ left: '445px', top: '30px' }}>
         <MapPin size={75} />
       </div>
-      <div className='absolute' style={{ left: '150px', top: '25px' }}>
+      <div className={`absolute z-${open[2] ? 10 : 0}`} style={{ left: '150px', top: '25px' }}>
         <ParkName
           name={'Jamaica Pond'}
           text={text[park.Jamaica_Pond]}
@@ -143,7 +139,7 @@ export default function MapPage () {
       <div className='absolute' style={{ right: '370px', top: '105px' }}>
         <MapPin size={75} />
       </div>
-      <div className='absolute' style={{ right: '260px', top: '205px' }}>
+      <div className={`absolute z-${open[3] ? 10 : 0}`} style={{ right: '260px', top: '205px'}}>
         <ParkName
           name={'Olmsted Park'}
           text={text[park.Olmsted_Park]}
@@ -152,7 +148,7 @@ export default function MapPage () {
           index={park.Olmsted_Park}
         />
       </div>
-      <div className='absolute' style={{ bottom: '40px', left: '330px' }}>
+      <div className={`absolute z-${open[0] ? 10 : 0}`} style={{ bottom: '40px', left: '330px' }}>
         <ParkName
           name={'Franklin Park'}
           text={text[park.Franklin_Park]}
@@ -161,7 +157,7 @@ export default function MapPage () {
           index={park.Franklin_Park}
         />
       </div>
-      <div className='absolute' style={{ right: '80px', top: '30px' }}>
+      <div className={`absolute z-${open[4] ? 10 : 0}`} style={{ right: '80px', top: '30px' }}>
         <ParkName
           name={'Riverway'}
           text={text[park.Riverway]}
