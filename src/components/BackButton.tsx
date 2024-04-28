@@ -1,10 +1,13 @@
 'use client'
 
 import react from 'react'
+import { useRouter } from 'next/navigation'
 
 const BackButton = () => {
+    const router = useRouter() 
+
     const handleClick = () => {
-        window.location.href = `/map`;
+        router.push('/map')
     }
 
     return (
