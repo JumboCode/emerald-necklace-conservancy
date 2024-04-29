@@ -1,11 +1,17 @@
+'use client'
+
 import React, { useState, useEffect} from 'react';
 import Logo from '../assets/new-enc-logo-300x144 1.png'
 import Splash from '../assets/splashscreen 1.png'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+  
 const WelcomePage = () => {
-        const handleClick = () => {
-                window.location.href = '/map';
-        }
+	const router = useRouter()
+    
+	const handleClick = () => {
+        router.push('/map')
+	}
         return (
                 <div
                 //   className="text-2xl w-full h-screen flex justify-center items-center bg-#FFFFFF cursor-pointer"

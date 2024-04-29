@@ -1,4 +1,7 @@
+'use client'
+
 import React from 'react';
+import { useRouter } from 'next/navigation'
 
 type MapButtonProps = {
     selected?: boolean;
@@ -30,33 +33,35 @@ type NavBarProps = {
 };
 
 const NavBar: React.FC<NavBarProps> = ({page, park}) => {
+
+    const router = useRouter()
+
 	const handleHistory = () => {
 		if (page !== 'History') {
-			window.location.href = `/${park}`;
+			router.push(`/${park}`);
 		}
 	}
 
 	const handleAttractions = () => {
 		if (page !== 'Attractions') {
-			window.location.href = `/${park}/attractions`;
+			router.push(`/${park}/attractions`);
 		}
 	}
 
 	const handleDirections = () => {
 		if (page !== 'Directions') {
-			window.location.href = `/${park}/directions`;
+			router.push(`/${park}/directions`);
 		}
 	}
 
     const handleSignup = () => {
         if (page !== 'Email Signup') {
-            window.location.href = `/email`
+            router.push('/email')
         }
     }
 
 	const handleMap = () => {
-		window.location.href = `/map`;
-		
+		router.push('/map')
 	}
 
   return (
