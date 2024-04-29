@@ -1,5 +1,8 @@
+'use client'
+
 import React from "react";
 import Head from 'next/head';
+import withTimeout from '../../components/Timeout'
     
 import BackButton from  '../../components/BackButton'
 
@@ -12,4 +15,4 @@ const EmailSignupPage = () => {
   );
 };
 
-export default EmailSignupPage;
+export default withTimeout(EmailSignupPage);

@@ -4,6 +4,7 @@
 'use client'
 
 import React from 'react'
+import withTimeout from '../../../components/Timeout'
 import ParkTitle from '@/components/ParkTitle'
 import MenuButton from '@/components/MenuButton'
 import ParkNav from '@/components/ParkNav'
@@ -16,32 +17,7 @@ import AttractionInformation from '@/components/AttractionInformation'
 import { useRef } from 'react'
 import BacktoTopButton from '@/components/BacktoTopButton'
 
-export default function JamaicaAttractions () {
-    // const preScroll = useRef(null);
-    // const elemRef = useRef(null);
-    // const [scale, setScale] = useState(1.05);
- 
-    // useLayoutEffect(() => {
-    //     const botPos = (element) => element.getBoundingClientRect().bottom;
-    //     const onScroll = () => {
-    //       const divBotPos = botPos(elemRef.current);
-    //       const scrollPos = preScroll.current > window.scrollY;
-    //       preScroll.current = window.scrollY;
-    //       if (scrollPos && divBotPos > window.innerHeight) {
-    //         setScale(1);
-    //         return;
-    //       }
-    //       if (divBotPos < window.innerHeight) {
-    //         setScale(1.1);
-    //       }
-    //     };
-    
-    //     window.addEventListener("scroll", onScroll);
-    //     return () => window.removeEventListener("scroll", onScroll);
-    //   }, []);
-  
-  
-  
+
   /* Update for location */
   const options = [
     'Jamaica Pond Boathouse/Bandstand',
@@ -182,3 +158,5 @@ export default function JamaicaAttractions () {
     </div>
   )
 }
+
+export default withTimeout(JamaicaAttractions)
