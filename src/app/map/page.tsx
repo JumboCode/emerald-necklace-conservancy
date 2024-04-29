@@ -1,4 +1,5 @@
 'use client'
+import withTimeout from '../../components/Timeout'
 import '../globals.css'
 import React from 'react'
 import { useState, useEffect } from 'react'
@@ -40,7 +41,7 @@ const text: string[] = [
   'The Riverway, which serves as a border between Boston and Brookline, is a narrow 34-acre park with paths that follow the meandering course of the Muddy River. With more than 100,000 plantings, it is home to some of the most beautiful bridges in the Emerald Necklace.',
   'The Back Bay Fens is an eclectic mix of formal and community gardens, ball fields, memorials and historic structures. With places for passive recreation and active pursuits, the park offers a range of experiences such as gardening and sports and is a popular spot for birders.'
 ]
-export default function MapPage () {
+export function MapPage () {
   const [open, setOpen] = useState<boolean[]>(
     new Array(park.Back_Bay + 1).fill(false)
   )
@@ -171,3 +172,5 @@ export default function MapPage () {
     </div>
   )
 }
+
+export default withTimeout(MapPage)

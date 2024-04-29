@@ -3,9 +3,10 @@
 */
 'use client'
 import React from "react"
+import withTimeout from '../../components/Timeout'
 import AttractionsContainer from '@/components/AttractionsContainer'
 
-export default function OlmsteadHist () {
+export function OlmsteadHist () {
     const pictures = [
         // Populate this array with your picture objects
         "/park_images/photo1.jpg",
@@ -28,3 +29,5 @@ export default function OlmsteadHist () {
         />
     );
 }
+
+export default withTimeout(OlmsteadHist)

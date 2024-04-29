@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import withTimeout from '../../../components/Timeout'
 import ParkTitle from '@/components/ParkTitle'
 import MenuButton from '@/components/MenuButton'
 import ParkNav from '@/components/ParkNav'
@@ -12,7 +13,7 @@ import AttractionInformation from '@/components/AttractionInformation'
 import { useRef } from 'react'
 import BacktoTopButton from '@/components/BacktoTopButton'
 
-export default function ArnArbAttractions () {
+export function ArnArbAttractions () {
   const options = [
     'Peters Hill',
     'Explorers Garden',
@@ -153,3 +154,5 @@ export default function ArnArbAttractions () {
     </div>
   )
 }
+
+export default withTimeout(ArnArbAttractions)

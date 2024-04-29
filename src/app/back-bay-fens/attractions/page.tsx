@@ -4,6 +4,7 @@
 'use client'
 
 import React from 'react'
+import withTimeout from '../../../components/Timeout'
 import ParkTitle from '@/components/ParkTitle'
 import MenuButton from '@/components/MenuButton'
 import ParkNav from '@/components/ParkNav'
@@ -16,7 +17,7 @@ import AttractionInformation from '@/components/AttractionInformation'
 import { useRef } from 'react'
 import BacktoTopButton from '@/components/BacktoTopButton'
 
-export default function BackBayAttractions () {
+export function BackBayAttractions () {
   /* TODO: Update for BackBay */
   const options = [
     'Athletic Facilities',
@@ -254,3 +255,5 @@ export default function BackBayAttractions () {
     </div>
   )
 }
+
+export default withTimeout(BackBayAttractions)

@@ -4,6 +4,7 @@
 'use client'
 
 import React from 'react'
+import withTimeout from '../../../components/Timeout'
 import ParkTitle from '@/components/ParkTitle'
 import MenuButton from '@/components/MenuButton'
 import ParkNav from '@/components/ParkNav'
@@ -16,7 +17,7 @@ import AttractionInformation from '@/components/AttractionInformation'
 import { useRef } from 'react'
 import BacktoTopButton from '@/components/BacktoTopButton'
 
-export default function JamaicaAttractions () {
+export function JamaicaAttractions () {
   /* Update for location */
   const options = [
     'Jamaica Pond Boathouse/Bandstand',
@@ -144,3 +145,5 @@ export default function JamaicaAttractions () {
     </div>
   )
 }
+
+export default withTimeout(JamaicaAttractions)

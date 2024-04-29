@@ -4,6 +4,7 @@
 'use client'
 import React from 'react'
 import ParkTitle from '@/components/ParkTitle'
+import withTimeout from '../../../components/Timeout'
 import MenuButton from '@/components/MenuButton'
 import ParkNav from '@/components/ParkNav'
 import bgmap from '/public/img/olmsted-park-map.png'
@@ -15,7 +16,7 @@ import AttractionInformation from '@/components/AttractionInformation'
 import { useRef } from 'react'
 import BacktoTopButton from '@/components/BacktoTopButton'
 
-export default function OlmstedAttractions () {
+export function OlmstedAttractions () {
   /* Update for location */
   const options = [
     "Ward's Pond",
@@ -193,3 +194,5 @@ export default function OlmstedAttractions () {
     </div>
   )
 }
+
+export default withTimeout(OlmstedAttractions)
