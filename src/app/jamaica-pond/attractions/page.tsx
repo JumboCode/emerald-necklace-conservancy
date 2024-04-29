@@ -178,5 +178,7 @@ export default function JamaicaAttractions () {
       </div>
       <MenuButton2 options={options} />
     </div>
+    </div>
+    </div>
   )
 }
