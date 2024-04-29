@@ -24,7 +24,7 @@ const AttractionInformation: React.FC<AttractionInformationProps> = ({
         <h1 className='text-black text-xl font-questrial'>{attractionName}</h1>
       </div>
       <div className='p-2'></div> {/* Padding here */}
-      <div className='inline-block bg-black bg-opacity-50 text-white p-2 w-3/4'>{attractionText}</div>
+      <div className='inline-block bg-black bg-opacity-50 text-white text-xl p-2 w-3/4'>{attractionText}</div>
     </div>
   )
 }

@@ -33,12 +33,12 @@ enum park {
   Back_Bay
 }
 const text: string[] = [
-  'At 527 acres, Franklin Park is the largest park in the Emerald Necklace. Named for Benjamin Franklin, the park brings together rural scenery, spectacular rock outcroppings, a woodland preserve, expansive pastoral vistas and an area for active recreation and sports.',
-  'Established in 1872, the Arnold Arboretum is open daily to the public as a free landscape for the study and enjoyment of trees, shrubs, and vines. The Arboretum is both a beautiful landscape of mature plants and a site for vital scientific research.',
-  'A pure, glacial kettle hole, Jamaica Pond captivated landscape architect Fredrick Law Olmsted with its “great beauty in reflections and flickering half-lights.” The boathouse at Jamaica Pond provides facilities for sailing, rowing, and fishing. The pond is stocked with trout and salmon raised in state hatcheries.',
-  'Landscape architect Fredrick Law Olmsted designed the park as “a chain of picturesque fresh-water ponds, alternating with attractive natural groves and meads.” Pathways, bridges, and plantings provide a series of vignettes with scene changes along the way.',
-  'The Riverway, which serves as a border between Boston and Brookline, is a narrow 34-acre park with paths that follow the meandering course of the Muddy River. With more than 100,000 plantings, it is home to some of the most beautiful bridges in the Emerald Necklace.',
-  'The Back Bay Fens is an eclectic mix of formal and community gardens, ball fields, memorials and historic structures. With places for passive recreation and active pursuits, the park offers a range of experiences such as gardening and sports and is a popular spot for birders.'
+  'At 527 acres, Franklin Park is the largest park in the Emerald Necklace. Named for Benjamin Franklin, the park brings together rural scenery, spectacular rock outcroppings, a woodland preserve, and expansive pastoral vistas.',
+  'Established in 1872, the Arnold Arboretum is open daily to the public as a free landscape for the study and enjoyment of trees, shrubs, and vines. The Arboretum is a beautiful landscape of mature plants.',
+  'A pure, glacial kettle hole, Jamaica Pond captivated landscape architect Fredrick Law Olmsted with its “great beauty in reflections and flickering half-lights.”',
+  'Landscape architect Fredrick Law Olmsted designed the park as “a chain of picturesque fresh-water ponds, alternating with attractive natural groves and meads.” Pathways, bridges, and plantings provide a series of vignettes.',
+  'The Riverway, which serves as a border between Boston and Brookline, is a narrow 34-acre park with paths that follow the meandering course of the Muddy River. With more than 100,000 plantings, it is home to some of the most beautiful bridges.',
+  'The Back Bay Fens is an eclectic mix of formal and community gardens, ball fields, memorials and historic structures. With places for passive recreation and active pursuits, the park offers a range of experiences such as gardening and sports.'
 ]
 export default function MapPage () {
   const [open, setOpen] = useState<boolean[]>(

@@ -29,7 +29,7 @@ const Modal: React.FC<ModalProps> = ({ title, text, url, open }) => {
 						<h2 className="text-3xl text-white text-center mt-2">
 							{title}
 						</h2>
-						<p className="px-6 py-6  text-white">{text}</p>
+						<p className="px-10 py-6 text-xl text-white">{text}</p>
 						<div className="flex items-center justify-center">
 							<Link
 								href={url}
@@ -50,7 +50,7 @@ const Modal: React.FC<ModalProps> = ({ title, text, url, open }) => {
 						<h2 className="text-3xl text-white text-center mt-2">
 							{title}
 						</h2>
-						<p className="px-6 py-6  text-white">{text}</p>
+						<p className="px-10 py-6 text-xl text-white">{text}</p>
 						<div className="flex items-center justify-center">
 							<Link
 								href={url}
@@ -71,7 +71,7 @@ const Modal: React.FC<ModalProps> = ({ title, text, url, open }) => {
 						<h2 className="text-3xl text-white text-center mt-2">
 							{title}
 						</h2>
-						<p className="px-6 py-6 text-white">{text}</p>
+						<p className="px-10 py-6 text-xl text-white">{text}</p>
 						<div className="flex items-center justify-center">
 							<Link
 								href={url}

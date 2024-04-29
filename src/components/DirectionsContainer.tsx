@@ -31,20 +31,20 @@ const DirectionsContainer: React.FC<DirectionsContainerProps> = ({ parkURL, park
                 </div>
                 <div className="relative w-1/2 h-full flex flex-col space-y-8 text-center p-16 overflow-auto pt-32 text-[#567534] text-lg">
                     <div>
-                        <h1 className="text-3xl pb-4">{titleCaseWithSpaces(parkName)}</h1>
-                        <p>Franklin Park is located by the Charles River. Lorem ipsum.</p>
+                        <h1 className="text-5xl pb-4">{titleCaseWithSpaces(parkName)}</h1>
+                        <p className="text-xl">Franklin Park is located by the Charles River. Lorem ipsum.</p>
                     </div>
                     <div>
                         <h2 className="text-xl">By Walking</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div>
                         <h3 className="text-xl">By Driving</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div>
                         <h4 className="text-xl">By Transit</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
             </div>
