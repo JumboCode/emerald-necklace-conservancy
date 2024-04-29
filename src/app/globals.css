@@ -19,6 +19,16 @@
 		--background-end-rgb: 0, 0, 0;
 	}
 }
+/* 
+body {
+	@apply object-cover max-w-screen-2xl bg-cover bg-center h-screen flex items-center justify-center;
+}
+
+p {
+	font-family: "questrial", "sans-serif";
+}
+
+
 
 body {
 	@apply object-cover max-w-screen-2xl bg-cover bg-center h-screen flex items-center justify-center;
