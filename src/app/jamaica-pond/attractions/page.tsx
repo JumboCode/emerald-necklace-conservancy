@@ -17,7 +17,7 @@ import AttractionInformation from '@/components/AttractionInformation'
 import { useRef } from 'react'
 import BacktoTopButton from '@/components/BacktoTopButton'
 
-export function JamaicaAttractions () {
+
   /* Update for location */
   const options = [
     'Jamaica Pond Boathouse/Bandstand',
@@ -35,14 +35,19 @@ export function JamaicaAttractions () {
   const ATTRACTION_START = 14
 
   return (
-    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full' id='top'>
-      <div className='flex justify-center items-center h-screen'>
+    <div className='absolute bg-custom-HistoryBackgroundGreen h-full w-full'>
+      <div id="group1" class="parallax parallax__group">
+      <div className='top-0 justify-center items-center'>
 		{/* Update: Name */}
         <ParkNav page={'Attractions'} park={'jamaica-pond'} />
-        <MenuButton2 options={options} />
+        
         {/* <Image className="absolute top-20 right-10" src={menu_icon} alt="Menu Icon" width={150} height={150}/> */}
-        <div>
-          <Image
+        <div className="parallax__fixed fixed">
+            {/*  style={{
+            transition: "transform 1000ms ease-in-out",
+            transform: `scale(${scale*1.2}) translate(${scale}%, 5%)`
+            }} */}
+             <Image
             className='m-auto mt-16'
             src={bgmap}
             alt='Jamaica Pond Map' /* Update: New alt */
@@ -93,17 +98,22 @@ export function JamaicaAttractions () {
             />
           </div>
         </div>
+        
         {/* QUESTRIAL is broken */}
         <p className='text-white font-orelega text-6xl absolute bottom-0 left-0 ml-10 mb-20'>
           {/* Update: Name */}
 		  Jamaica Pond{' '}
         </p>
-      </div>
 
-      <div className='bg-custom-HistoryBackgroundGreen w-full'>
+
+      
+      
+      <div id="group1" class="parallax parallax__group" className='bg-custom-HistoryBackgroundGreen w-full'>
+        <div class="h-[50vh]"> 
+        </div>
         {' '}
 		{/* Update refs here */}
-        <div ref={descriptionRefs[0]} id='0'>
+        <div class="parallax__layer parallax__layer--base" ref={descriptionRefs[0]} id='0'>
           <AttractionInformation
             attractionNumber={ATTRACTION_START + 0}
             attractionName={'Jamica Pond Boathouse/Bandstand'}
@@ -142,6 +152,9 @@ export function JamaicaAttractions () {
         {/* Lengthen page */}
         <BacktoTopButton />
       </div>
+      <MenuButton2 options={options} />
+    </div>
+    </div>
     </div>
   )
 }
