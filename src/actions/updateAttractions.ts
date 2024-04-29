@@ -20,5 +20,3 @@ async function updateAttractions(park: string, attractions: AttractionT[]) {
 }
 
 export default updateAttractions
-
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
