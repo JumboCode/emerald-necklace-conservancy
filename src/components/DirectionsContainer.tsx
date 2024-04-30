@@ -23,7 +23,7 @@ const DirectionsContainer: React.FC<DirectionsContainerProps> = ({
 	}
 	return (
 		<div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
-			<ParkNav page={'Directions'} park={park.name} />
+			<ParkNav page={'Directions'} park={park.slug} />
 			<div className="flex flex-grow items-stretch justify-between w-full bg-custom-HistoryBackgroundGreen">
 				<div className="absolute inset-0 z-0">
 					<Image
