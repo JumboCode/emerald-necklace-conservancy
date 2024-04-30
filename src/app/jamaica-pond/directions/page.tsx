@@ -2,11 +2,13 @@
     jamaica-pond/directions
 */
 
-import React from 'react'
+
+import withTimeout from '../../../components/Timeout'
+import React from "react";
 import DirectionsContainer from '../../../components/DirectionsContainer'
 import getPark from '@/utils/getPark'
 
-export default async function JamaicaPondDirections() {
+async function JamaicaPondDirections() {
 	const park = await getPark('jamaica-pond')
 
 	return (
@@ -16,3 +18,5 @@ export default async function JamaicaPondDirections() {
 		/>
 	)
 }
+
+export default withTimeout(JamaicaPondDirections)

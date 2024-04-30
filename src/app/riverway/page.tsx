@@ -2,10 +2,11 @@
     riverway/
 */
 import React from 'react'
+import withTimeout from '../../components/Timeout'
 import AttractionsContainer from '@/components/AttractionsContainer'
 import getPark from '@/utils/getPark'
 
-export default async function RiverwayHistory() {
+async function RiverwayHistory() {
 	const pictures = [
 		// Populate this array with your picture objects
 		'/park_images/photo1.jpg',
@@ -25,3 +26,5 @@ export default async function RiverwayHistory() {
 		/>
 	)
 }
+
+export default withTimeout(RiverwayHistory)

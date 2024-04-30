@@ -4,8 +4,9 @@
 'use client'
 
 import React from "react";
+import withTimeout from '../../../components/Timeout'
 
-export default function PubGardenAttractions() {
+export function PubGardenAttractions() {
 	return (
 		<div>
 			{
@@ -14,3 +15,5 @@ export default function PubGardenAttractions() {
 		</div>
 	)
 }
+
+export default withTimeout(PubGardenAttractions)

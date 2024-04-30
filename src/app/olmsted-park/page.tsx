@@ -2,10 +2,11 @@
     olmsted-park/
 */
 import React from 'react'
+import withTimeout from '../../components/Timeout'
 import AttractionsContainer from '@/components/AttractionsContainer'
 import getPark from '@/utils/getPark'
 
-export default async function OlmsteadHist() {
+async function OlmsteadHist() {
 	const pictures = [
 		// Populate this array with your picture objects
 		'/park_images/photo1.jpg',
@@ -25,3 +26,5 @@ export default async function OlmsteadHist() {
 		/>
 	)
 }
+
+export default withTimeout(OlmsteadHist)

@@ -1,18 +1,21 @@
 /*
     arnold-arboretum/
 */
-import React from 'react'
+
+import React from "react"
+import withTimeout from '../../components/Timeout'
 import AttractionsContainer from '@/components/AttractionsContainer'
 import getPark from '@/utils/getPark'
 
-export default async function ArnArbHistory() {
-	const pictures = [
-		// Populate this array with your picture objects
-		'/park_images/photo1.jpg',
-		'/park_images/photo2.jpg',
-		'/park_images/photo2.jpg',
-		// ...more pictures
-	]
+
+export function ArnArbHistory() {
+    const pictures = [
+        // Populate this array with your picture objects
+        "/park_images/photo1.jpg",
+        "/park_images/photo2.jpg",
+        "/park_images/photo2.jpg",
+        // ...more pictures
+      ];
 
 	const text = (await getPark('arnold-arboretum')).history.description
 
@@ -25,3 +28,5 @@ export default async function ArnArbHistory() {
 		/>
 	)
 }
+export default withTimeout(ArnArbHistory)
+

@@ -3,10 +3,11 @@
 */
 
 import React from 'react'
+import withTimeout from '../../../components/Timeout'
 import DirectionsContainer from '../../../components/DirectionsContainer'
 import getPark from '@/utils/getPark'
 
-export default async function RiverwayDirections() {
+async function RiverwayDirections() {
 	const park = await getPark('riverway')
 
 	return (
@@ -16,3 +17,6 @@ export default async function RiverwayDirections() {
 		/>
 	)
 }
+
+export default withTimeout(RiverwayDirections)
+

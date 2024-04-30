@@ -1,4 +1,6 @@
 import Client from './Client'
+import withTimeout from '../../components/Timeout'
+
 
 import { ParkPopups } from '@/types'
 import getParkPopups from '@/actions/getParkPopups'
@@ -10,4 +12,4 @@ const Map: React.FC<Props> = async ({}) => {
 	return <Client text={text} />
 }
 
-export default Map
+export default withTimeout(Map)

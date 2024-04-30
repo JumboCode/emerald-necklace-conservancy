@@ -1,12 +1,12 @@
 /*
     franklin-park/directions
 */
-
-import React from 'react'
+import React from "react";
+import withTimeout from '../../../components/Timeout'
 import DirectionsContainer from '../../../components/DirectionsContainer'
 import getPark from '@/utils/getPark'
 
-export default async function FranklinParkDirections() {
+async function FranklinParkDirections() {
 	const park = await getPark('franklin-park')
 
 	return (
@@ -16,3 +16,5 @@ export default async function FranklinParkDirections() {
 		/>
 	)
 }
+
+export default withTimeout(FranklinParkDirections)

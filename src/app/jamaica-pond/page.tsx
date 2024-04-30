@@ -1,11 +1,12 @@
 /*
     arnold-arboretum/
 */
-import React from 'react'
+import withTimeout from '../../components/Timeout'
+import React from "react"
 import AttractionsContainer from '@/components/AttractionsContainer'
 import getPark from '@/utils/getPark'
 
-export default async function JamaicaPondHist() {
+async function JamaicaPondHist() {
 	const pictures = [
 		// Populate this array with your picture objects
 		'/park_images/photo1.jpg',
@@ -25,3 +26,5 @@ export default async function JamaicaPondHist() {
 		/>
 	)
 }
+
+export default withTimeout(JamaicaPondHist)

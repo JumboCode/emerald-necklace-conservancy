@@ -2,12 +2,15 @@
     back-bay-fens/directions
 */
 
-import React from 'react'
+
+import React from "react";
+import withTimeout from '../../../components/Timeout'
 import DirectionsContainer from '../../../components/DirectionsContainer'
 import getPark from '@/utils/getPark'
 
-export default async function BackBayFensDirections() {
-	const park = await getPark('back-bay-fens')
+
+export function BackBayFensDirections() {
+  const park = await getPark('back-bay-fens')
 
 	return (
 		<DirectionsContainer
@@ -16,3 +19,6 @@ export default async function BackBayFensDirections() {
 		/>
 	)
 }
+
+export default withTimeout(BackBayFensDirections)
+
