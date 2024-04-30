@@ -18,23 +18,23 @@ const MenuBar: React.FC<MenuBarProps> = ({ id, saving }) => {
 	return (
 		<div className="flex w-full py-4 px-8 border-b border-enc-green h-28 bg-white">
 			<div className="flex items-center justify-center space-x-4 ml-auto mr-20">
-				<button className="font-questrial text-xl text-[#333333] font-thin  bg-enc-light-green h-min py-3 px-10 rounded-lg hover:bg-enc-yellow">
-					Preview
+				<button className="text-xl text-[#333333] font-thin  bg-enc-light-green h-min py-3 px-10 rounded-lg hover:bg-enc-yellow">
+					<h2>Preview</h2>
 				</button>
 
 				<button
 					form={id}
 					type="submit"
-					className="font-questrial text-2xl font-superthin bg-white text-enc-green border-enc-green border py-3 px-10 rounded-lg hover:bg-enc-yellow h-16 flex items-center justify-center w-36"
+					className="text-2xl font-superthin bg-white text-enc-green border-enc-green border py-3 px-10 rounded-lg hover:bg-enc-yellow h-16 flex items-center justify-center w-36"
 				>
-					{saving ? <CircleLoader color="#567534" /> : 'Save'}
+					<h2>{saving ? <CircleLoader color="#567534" /> : 'Save'}</h2>
 				</button>
 
 				<Link
 					href="/logout"
-					className="font-questrial text-2xl font-superthin bg-white text-enc-green border-enc-green border h-16 py-3 px-10 rounded-lg hover:bg-enc-yellow"
+					className="text-2xl font-superthin bg-white text-enc-green border-enc-green border h-16 py-3 px-10 rounded-lg hover:bg-enc-yellow"
 				>
-					Log Out
+					<h2>Log Out</h2>
 				</Link>
 			</div>
 		</div>

@@ -25,7 +25,7 @@ const Layout: React.FC<Props> = ({ children }) => {
 					<div className="mt-28 border-t border-enc-green overflow-auto h-screen">
 						<Link
 							href="/admin/popups"
-							className="w-full h-20 flex items-center justify-start border-b  font-questrial text-xl font-thin text-enc-green hover:bg-enc-yellow border-r border-enc-green"
+							className="w-full h-20 flex items-center justify-start border-b text-xl font-thin text-enc-green hover:bg-enc-yellow border-r border-enc-green"
 						>
 							<div className="w-12"></div>
 							<span className="ml-4">Map Popups</span>

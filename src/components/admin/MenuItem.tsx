@@ -20,7 +20,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, url }) => {
 		<div className="">
 			<button
 				onClick={() => setOpen(!open)}
-				className={`w-full h-20 flex items-center justify-start border-b  font-questrial text-xl font-thin text-enc-green hover:bg-enc-light-green border-r border-enc-green ${
+				className={`w-full h-20 flex items-center justify-start border-b text-xl font-thin text-enc-green hover:bg-enc-light-green border-r border-enc-green ${
 					isActive(pathname, url) && 'bg-enc-yellow'
 				}`}
 			>

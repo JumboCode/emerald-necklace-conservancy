@@ -1,7 +1,3 @@
-/* FONT IMPORTS MUST BE ABOVE TAILWIND IMPORTS */
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +6,22 @@
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255;
+}
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('/font/AvenirLTStd-Medium.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Eaves';
+	src: url('/font/Mrs_Eaves_OT_Bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,7 +37,21 @@ body {
 }
 
 p {
-	font-family: "questrial", "sans-serif";
+	font-family: "Avenir", "sans-serif";
+}
+
+h2 {
+	font-family: "Eaves", "serif";
+	-webkit-font-smoothing: subpixel-antialiased !important;
+	text-rendering:optimizeLegibility;
+	-webkit-text-stroke: .3px;
+}
+
+h1 {
+	font-family: "Eaves", "serif";
+	-webkit-font-smoothing: subpixel-antialiased !important;
+	text-rendering:optimizeLegibility;
+	-webkit-text-stroke: .3px;
 }
 
 .button {

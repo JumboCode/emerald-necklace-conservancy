@@ -33,7 +33,7 @@ const MenuButton2: React.FC<DropdownProps> = ({ options }) => {
               href={`#${index}`}
               className='block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white border-b-2 border-black'
             >
-              {option}
+              <p>{option}</p>
             </a>
           ))}
         </div>

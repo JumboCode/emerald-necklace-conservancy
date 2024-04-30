@@ -15,7 +15,7 @@ const AttractionCircle: React.FC<AttractionCircleProps> = ({ num, size, fontSize
     <div
       className='bg-custom-yellow w-12 h-12 rounded-full flex justify-center items-center'
       style={{ height: circleSize, width: circleSize}}>
-      <h1 className='text-black text-xl font-questrial' style={{fontSize: fSize}}>{num}</h1>
+      <h1 className='text-black text-xl' style={{fontSize: fSize}}>{num}</h1>
     </div>
   )
 }

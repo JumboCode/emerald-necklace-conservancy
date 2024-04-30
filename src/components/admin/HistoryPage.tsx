@@ -47,7 +47,7 @@ const HistoryPage: React.FC<Props> = ({ park }) => {
 				</form>
 				<div className="">
 					<div className="bg-enc-light-green w-full h-12 flex items-center pl-12">
-						<h2 className="font-questrial text-2xl text-[#33333] text-light">
+						<h2 className="text-2xl text-[#33333] text-light">
 							Images
 						</h2>
 					</div>

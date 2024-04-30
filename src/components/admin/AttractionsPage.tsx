@@ -61,7 +61,7 @@ const AttractionPage: React.FC<Props> = ({ park }) => {
 					<Title title={`${park.name} - Attractions`} />
 					<button
 						onClick={addAttraction}
-						className="bg-white rounded-md  hover:bg-enc-light-green h-min font-questrial text-black text-center w-32 mr-5 p-2"
+						className="bg-white rounded-md  hover:bg-enc-light-green h-min text-black text-center w-32 mr-5 p-2"
 					>
 						Add Attraction
 					</button>

@@ -15,7 +15,7 @@ const AttractionNumber: React.FC<AttractionNumber> = ({ number }) => {
     return (
         <div className="absolute top-0 left-0 mt-10 ml-10">
             <div className="p-6 max-w-sm">
-                <h1 className="text-2xl font-semibold font-Inter mb-4">{number}</h1>
+                <h1 className="text-2xl font-semibold mb-4">{number}</h1>
             </div>
         </div>
     );

@@ -11,7 +11,7 @@ const MapButton = () => {
         <div className = "fixed bottom-0 right-0 p-1">
             <div className="bg-custom-NavBarGreen p-2 rounded-b-lg rounded-t-lg shadow-md">
             <button onClick={handleClick} style={{ color: 'white', fontSize: '20px', padding: '10px 10px' }}> 
-      SIGNUP
+        <h2>SIGNUP</h2>
     </button> 
             </div>
         </div>

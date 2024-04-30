@@ -8,12 +8,12 @@ const Section: React.FC<Props> = ({ title, id, defaultValue }) => {
 	return (
 		<div className="bg-[#333333]">
 			<div className="bg-enc-light-green w-full h-12 flex items-center pl-12">
-				<h2 className="font-questrial text-2xl text-[#33333] text-light">
+				<h2 className="text-2xl text-[#33333] text-light">
 					{title}
 				</h2>
 			</div>
 			<textarea
-				className="bg-transparent w-full font-questrial text-white text-lg  p-4 focus:outline-none"
+				className="bg-transparent w-full text-white text-lg  p-4 focus:outline-none"
 				id={id}
 				name={id}
 				// type="text"
@@ -39,14 +39,14 @@ export const SectionWithTitle: React.FC<Props> = ({
 				<input
 					id={`${id}-title`}
 					name={`${id}-title`}
-					className="bg-transparent w-full font-questrial text-[#33333] text-2xl focus:outline-none placeholder:text-gray-500"
+					className="bg-transparent w-full text-[#33333] text-2xl focus:outline-none placeholder:text-gray-500"
 					required
 					placeholder="title"
 					defaultValue={title}
 				/>
 			</div>
 			<textarea
-				className="bg-transparent w-full font-questrial text-white text-lg  p-4 focus:outline-none placeholder:text-gray-500"
+				className="bg-transparent w-full text-white text-lg  p-4 focus:outline-none placeholder:text-gray-500"
 				id={id}
 				name={id}
 				// type="text"

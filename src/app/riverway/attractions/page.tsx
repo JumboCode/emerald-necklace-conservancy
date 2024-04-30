@@ -94,10 +94,10 @@ export default function RiverwayAttractions () {
           </div>
         </div>
         {/* QUESTRIAL is broken */}
-        <p className='text-white font-orelega text-6xl absolute bottom-0 left-0 ml-10 mb-20'>
+        <h1 className='text-white text-6xl absolute bottom-0 left-0 ml-10 mb-20'>
           {/* Update: Name */}
 		  Riverway{' '}
-        </p>
+        </h1>
       </div>
 
       <div className='bg-custom-HistoryBackgroundGreen w-full'>

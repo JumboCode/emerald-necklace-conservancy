@@ -19,7 +19,7 @@ const NavButton: React.FC<NavButtonProps> = ({ label, selected, onClick }) => {
         selected ? 'bg-custom-yellow' : 'bg-transparent'
       } hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300 ease-in-out`}
     >
-      {label}
+      <h2>{label}</h2>
     </button>
   );
 }

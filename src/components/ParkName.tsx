@@ -1,13 +1,6 @@
-// import { Orelega_One } from "next/font/google";
 import React, {useState} from 'react'
 import ParkModal from '@/components/ParkModal'
 
-
-// const orelega_One = Orelega_One({
-//     subsets: ['latin'],
-//     weight: "400",
-//     variable: '--font-orelega_One'
-// });
 enum park {
     Franklin_Park,
     Arnold_Arboretum,
@@ -36,10 +29,10 @@ const ParkName: React.FC<ParkNameProps> = ({ name, text, open, setOpen, index })
 
 	return (
 		<>
-			<button 
+			<button
 				className="button-border"
 				onClick={handleClick}>
-				{name}
+				<h1>{name}</h1>
 			</button>
 			<ParkModal title={name} url={`/${name.replace(/\s/g, "-").toLowerCase()}`} text={text} open={open[index]}/>
 		</>
