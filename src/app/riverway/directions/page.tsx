@@ -18,5 +18,4 @@ async function RiverwayDirections() {
 	)
 }
 
-export default withTimeout(RiverwayDirections)
-
+export default RiverwayDirections

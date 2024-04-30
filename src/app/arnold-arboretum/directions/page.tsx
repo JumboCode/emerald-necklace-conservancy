@@ -2,14 +2,13 @@
     arnold-arboretum/directions
 */
 
-
-import React from "react";
+import React from 'react'
 import withTimeout from '../../../components/Timeout'
 import DirectionsContainer from '../../../components/DirectionsContainer'
 import getPark from '@/utils/getPark'
 
-export function ArnArbDirections() {
-const park = await getPark('arnold-arboretum')
+async function ArnArbDirections() {
+	const park = await getPark('arnold-arboretum')
 
 	return (
 		<DirectionsContainer
@@ -19,4 +18,4 @@ const park = await getPark('arnold-arboretum')
 	)
 }
 
-export default withTimeout(ArnArbDirections)
+export default ArnArbDirections

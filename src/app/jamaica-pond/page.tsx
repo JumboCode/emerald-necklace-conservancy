@@ -2,7 +2,7 @@
     arnold-arboretum/
 */
 import withTimeout from '../../components/Timeout'
-import React from "react"
+import React from 'react'
 import AttractionsContainer from '@/components/AttractionsContainer'
 import getPark from '@/utils/getPark'
 
@@ -27,4 +27,4 @@ async function JamaicaPondHist() {
 	)
 }
 
-export default withTimeout(JamaicaPondHist)
+export default JamaicaPondHist

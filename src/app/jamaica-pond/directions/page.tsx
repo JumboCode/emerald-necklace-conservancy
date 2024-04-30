@@ -2,9 +2,7 @@
     jamaica-pond/directions
 */
 
-
-import withTimeout from '../../../components/Timeout'
-import React from "react";
+import React from 'react'
 import DirectionsContainer from '../../../components/DirectionsContainer'
 import getPark from '@/utils/getPark'
 
@@ -19,4 +17,4 @@ async function JamaicaPondDirections() {
 	)
 }
 
-export default withTimeout(JamaicaPondDirections)
+export default JamaicaPondDirections

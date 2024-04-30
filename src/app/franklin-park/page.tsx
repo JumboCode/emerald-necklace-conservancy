@@ -3,7 +3,7 @@
 */
 import React from 'react'
 import withTimeout from '../../components/Timeout'
-import ParkTitle from "@/components/ParkTitle"
+import ParkTitle from '@/components/ParkTitle'
 import AttractionsContainer from '@/components/AttractionsContainer'
 import getPark from '@/utils/getPark'
 
@@ -28,4 +28,4 @@ async function FraParkHistory() {
 	)
 }
 
-export default withTimeout(FraParkHistory)
+export default FraParkHistory

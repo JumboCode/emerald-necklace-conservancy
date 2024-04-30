@@ -27,4 +27,4 @@ async function OlmsteadHist() {
 	)
 }
 
-export default withTimeout(OlmsteadHist)
+export default OlmsteadHist

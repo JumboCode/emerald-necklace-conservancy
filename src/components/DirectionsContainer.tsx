@@ -4,6 +4,7 @@ import ParkNav from './ParkNav'
 import Image from 'next/image'
 import background from '/public/directions_bg.png'
 import { ParkT } from '@/types'
+import withTimeout from './Timeout'
 interface DirectionsContainerProps {
 	parkURL: string
 	park: ParkT
@@ -66,4 +67,4 @@ const DirectionsContainer: React.FC<DirectionsContainerProps> = ({
 		</div>
 	)
 }
-export default DirectionsContainer
+export default withTimeout(DirectionsContainer)

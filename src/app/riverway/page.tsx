@@ -27,4 +27,4 @@ async function RiverwayHistory() {
 	)
 }
 
-export default withTimeout(RiverwayHistory)
+export default RiverwayHistory

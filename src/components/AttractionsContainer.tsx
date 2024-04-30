@@ -7,6 +7,7 @@ import ParkNav from '@/components/ParkNav'
 import Image from 'next/image'
 import background from '/public/img/white_shapes.png'
 import ImageList from '@/components/ParkImage'
+import withTimeout from '@/components/Timeout'
 
 interface ParkTitleProps {
 	park: string
@@ -69,4 +70,4 @@ const AttractionsContainer: React.FC<ParkTitleProps> = ({
 	return loading ? <LoadingScreen /> : <Screen />
 }
 
-export default AttractionsContainer
+export default withTimeout(AttractionsContainer)

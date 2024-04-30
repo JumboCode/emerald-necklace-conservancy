@@ -6,6 +6,7 @@ import MapPin from '@/components/MapPin'
 import ParkName from '@/components/ParkName'
 import ParkModal from '@/components/ParkModal'
 import { ParkPopups } from '@/types'
+import withTimeout from '../../components/Timeout'
 
 import MapButton from '@/components/MapButton'
 
@@ -201,4 +202,4 @@ const MapPage: React.FC<Props> = ({ text }) => {
 	)
 }
 
-export default MapPage
+export default withTimeout(MapPage)
