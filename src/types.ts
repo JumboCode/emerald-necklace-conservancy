@@ -28,3 +28,12 @@ export type AttractionT = {
 	image: string
 	number: number
 }
+
+export type ParkPopups = {
+	franklinPark: string
+	arnoldArboretum: string
+	jamaicaPond: string
+	olmstedPark: string
+	riverway: string
+	backBayFens: string
+}
