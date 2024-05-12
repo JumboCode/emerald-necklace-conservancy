@@ -4,7 +4,7 @@
 import React from 'react'
 import withTimeout from '../../components/Timeout'
 import ParkTitle from '@/components/ParkTitle'
-import AttractionsContainer from '@/components/AttractionsContainer'
+import HistoryContainer from '@/components/HistoryContainer'
 import getPark from '@/utils/getPark'
 
 async function FraParkHistory() {
@@ -16,16 +16,9 @@ async function FraParkHistory() {
 		// ...more pictures
 	]
 
-	const text = (await getPark('franklin-park')).history.description
+	const park = await getPark('franklin-park')
 
-	return (
-		<AttractionsContainer
-			park="franklin-park"
-			pictures={pictures}
-			title="Franklin Park"
-			bodyText={text.first}
-		/>
-	)
+	return <HistoryContainer park={park} />
 }
 
 export default FraParkHistory

@@ -112,7 +112,7 @@ const JamaicaAttractions: React.FC<Props> = ({}) => {
 						class="parallax parallax__group"
 						className="bg-custom-HistoryBackgroundGreen w-full"
 					>
-						<div class="h-[50vh]"></div> {/* Update refs here */}
+						<div class="h-screen"></div>
 						<div
 							class="parallax__layer parallax__layer--base"
 							ref={descriptionRefs[0]}

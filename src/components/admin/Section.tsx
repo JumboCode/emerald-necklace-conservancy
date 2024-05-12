@@ -2,6 +2,7 @@ interface Props {
 	title: string
 	id: string
 	defaultValue: string
+	number?: number
 }
 
 const Section: React.FC<Props> = ({ title, id, defaultValue }) => {
@@ -32,10 +33,14 @@ export const SectionWithTitle: React.FC<Props> = ({
 	title,
 	id,
 	defaultValue,
+	number,
 }) => {
 	return (
 		<div className="bg-[#333333]">
-			<div className="bg-enc-light-green w-full h-12 flex items-center pl-12">
+			<div className="bg-enc-light-green w-full h-12 flex items-center pl-12 justify-start">
+				<p className="bg-transparent font-questrial text-[#33333] text-2xl focus:outline-none placeholder:text-gray-500 pr-3">
+					{number}.
+				</p>
 				<input
 					id={`${id}-title`}
 					name={`${id}-title`}

@@ -60,7 +60,7 @@ const NavBar: React.FC<NavBarProps> = ({ page, park }) => {
 	}
 
 	const handleMap = () => {
-		window.location.href = '/'
+		window.location.href = '/?map=true'
 	}
 
 	return (

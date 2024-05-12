@@ -36,20 +36,6 @@ const AttractionPage: React.FC<Props> = ({ park }) => {
 		updateAttractions(park.slug, allAttractions)
 	}
 
-	const addAttraction = () => {
-		const newAttraction: AttractionT = {
-			number: attractions.length + 1,
-			name: '',
-			description: '',
-			image: '',
-		}
-		console.log(newAttraction)
-		const newAttractions = [...attractions]
-		newAttractions.unshift(newAttraction)
-
-		setAttractions(newAttractions)
-	}
-
 	return (
 		<div className="h-full w-full">
 			<div className="w-5/6 fixed top-0 h-28 right-0">
@@ -59,12 +45,6 @@ const AttractionPage: React.FC<Props> = ({ park }) => {
 			<div className="w-full bg-[#333333] h-full mt-28">
 				<div className="flex flex-row bg-enc-yellow items-center">
 					<Title title={`${park.name} - Attractions`} />
-					<button
-						onClick={addAttraction}
-						className="bg-white rounded-md  hover:bg-enc-light-green h-min font-questrial text-black text-center w-32 mr-5 p-2"
-					>
-						Add Attraction
-					</button>
 				</div>
 				<form action={save} method="POST" id={park.slug}>
 					{attractions
@@ -95,7 +75,8 @@ const Attraction: React.FC<AttractionProps> = ({ attraction }) => {
 			<SectionWithTitle
 				id={getId(attraction)}
 				defaultValue={attraction.description}
-				title={attraction.name}
+				title={`${attraction.name}`}
+				number={attraction.number}
 			/>
 		</div>
 	)

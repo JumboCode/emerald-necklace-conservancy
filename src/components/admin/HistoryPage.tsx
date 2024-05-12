@@ -16,12 +16,20 @@ const HistoryPage: React.FC<Props> = ({ park }) => {
 	const [saving, setSaving] = useState(false)
 
 	const save = (formData: FormData) => {
+		const pics = [
+			'/park_images/photo1.jpg',
+			'/park_images/photo2.jpg',
+			'/park_images/photo1.jpg',
+			'/park_images/photo2.jpg',
+			'/park_images/photo1.jpg',
+			'/park_images/photo2.jpg',
+		]
 		console.log('save')
 		const first = formData.get('first') as string
 		const second = formData.get('second') as string
 		console.log(first, second)
 		if (!first || !second) return
-		updateHistory(park.slug, first, second)
+		updateHistory(park.slug, first, second, pics)
 	}
 
 	return (

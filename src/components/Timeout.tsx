@@ -13,7 +13,7 @@ export default function withTimeout(WrappedComponent: any) {
 				clearTimeout(timeoutRef.current)
 			}
 			timeoutRef.current = setTimeout(() => {
-				router.push('/')
+				// router.push('/')
 			}, 30000)
 		}
 

@@ -1,13 +1,14 @@
-import Client from './Client'
-
-import { ParkPopups } from '@/types'
-import getParkPopups from '@/actions/getParkPopups'
+import { useRouter } from 'next/navigation'
 
 interface Props {}
 
-const Map: React.FC<Props> = async ({}) => {
-	const text: ParkPopups = await getParkPopups()
-	return <Client text={text} />
+const Map: React.FC<Props> = ({}) => {
+	const router = useRouter()
+
+	// redirect to /
+	router.push('/?map=true')
+
+	return <div></div>
 }
 
 export default Map

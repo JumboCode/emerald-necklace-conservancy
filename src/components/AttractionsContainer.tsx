@@ -1,73 +1,41 @@
 'use client'
-
-import React, { useEffect, useState } from 'react'
-import LoadingScreen from '@/components/LoadingScreen'
-import ParkTitle from '@/components/ParkTitle'
-import ParkNav from '@/components/ParkNav'
-import Image from 'next/image'
-import background from '/public/img/white_shapes.png'
-import ImageList from '@/components/ParkImage'
+import React from 'react'
 import withTimeout from '@/components/Timeout'
+import Attraction from './Attraction'
+import ParkNav from '@/components/ParkNav'
+import { AttractionT, ParkT } from '@/types'
 
-interface ParkTitleProps {
-	park: string
-	bodyText: string
-	title: string
-	pictures: string[]
+interface Props {
+	park: ParkT
 }
 
-const AttractionsContainer: React.FC<ParkTitleProps> = ({
-	park,
-	bodyText,
-	title,
-	pictures,
-}) => {
-	const [loading, setLoading] = useState(true)
+const AttractionsContainer: React.FC<Props> = ({ park }) => {
+	return (
+		<div className="bg-custom-HistoryBackgroundGreen h-full w-full">
+			<div className="justify-center items-center">
+				<ParkNav page={'Attractions'} park={'arnold-arboretum'} />
 
-	// Calculate height based on the number of pictures
-	const height: number = pictures.length * 525 + 150
-
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setLoading(false)
-		}, 1250)
-
-		// Clean up the timer on component unmount
-		return () => clearTimeout(timer)
-	}, [])
-
-	// Screen component encapsulating the layout
-	const Screen = () => (
-		<div className="bg-custom-HistoryBackgroundGreen">
-			<div className="parallax__fixed">
-				<ParkNav page="History" park={park} />
-			</div>
-			<div id="group1" className="parallax parallax__group">
-				<div className="parallax__layer parallax__layer--baseback">
-					<ParkTitle title={title} bodyText={bodyText} />
+				<div className="h-screen">
+					<p>MAP</p>
 				</div>
-				<div className="parallax__layer parallax__layer--back">
-					<div className="absolute top-20 w-full">
-						<ImageList images={pictures} />
-					</div>
-				</div>
-				<div className="parallax__layer parallax__layer--deep flex-grow">
-					<Image
-						src={background}
-						alt="Splash Background"
-						style={{
-							width: '100%',
-							transformOrigin: 'top',
-							height: `${height}px`,
-						}}
+
+				<p className="text-white font-orelega text-6xl ml-10 mb-20">
+					Arnold Arboretum
+				</p>
+
+				{park.attractions.map((attraction, index) => (
+					<Attraction
+						key={index}
+						name={attraction.name}
+						number={attraction.number}
+						text={attraction.description}
+						image={attraction.image}
+						id={index.toString()}
 					/>
-				</div>
+				))}
 			</div>
 		</div>
 	)
-
-	// Conditional rendering based on the loading state
-	return loading ? <LoadingScreen /> : <Screen />
 }
 
 export default withTimeout(AttractionsContainer)

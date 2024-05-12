@@ -1,18 +1,22 @@
 'use client'
 
-import React from "react";
-import Head from 'next/head';
+import React from 'react'
 import withTimeout from '../../components/Timeout'
-    
-import BackButton from  '../../components/BackButton'
+
+import BackButton from '../../components/BackButton'
 
 const EmailSignupPage = () => {
-  return (
-    <div style={{ marginLeft: '-600px' }}>
-      <iframe src="https://www.emeraldnecklace.org/contact/sign-up-for-enews/" width="300%" height="650px" frameBorder="0"></iframe>
-      <BackButton></BackButton>
-    </div>
-  );
-};
+	return (
+		<div className="w-full  h-screen pt-24">
+			<iframe
+				src="https://www.emeraldnecklace.org/contact/sign-up-for-enews/"
+				width="100%"
+				height="100%"
+				frameBorder="0"
+			></iframe>
+			<BackButton></BackButton>
+		</div>
+	)
+}
 
-export default withTimeout(EmailSignupPage);
+export default withTimeout(EmailSignupPage)

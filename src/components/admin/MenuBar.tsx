@@ -13,15 +13,9 @@ interface MenuBarProps {
 }
 
 const MenuBar: React.FC<MenuBarProps> = ({ id, saving }) => {
-	const status = useFormStatus()
-
 	return (
-		<div className="flex w-full py-4 px-8 border-b border-enc-green h-28 bg-white">
+		<div className="flex w-full py-4 px-8 border-b border-enc-green h-28  bg-white">
 			<div className="flex items-center justify-center space-x-4 ml-auto mr-20">
-				<button className="font-questrial text-xl text-[#333333] font-thin  bg-enc-light-green h-min py-3 px-10 rounded-lg hover:bg-enc-yellow">
-					Preview
-				</button>
-
 				<button
 					form={id}
 					type="submit"

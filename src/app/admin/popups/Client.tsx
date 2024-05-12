@@ -54,7 +54,7 @@ const Client: React.FC<Props> = ({ popups }) => {
 
 			<div className="w-full bg-[#333333] h-full mt-28">
 				<Title title="Map Popups" />
-				<form action={save} method="POST" id={'popups-btn'}>
+				<form action={save} method="POST" id={'popup'}>
 					<Section
 						title="Franklin Park"
 						id="franklin-park"

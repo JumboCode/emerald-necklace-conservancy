@@ -2,7 +2,12 @@
 
 import clientPromise from '@/utils/db'
 
-async function updateHistory(park: string, first: string, second: string) {
+async function updateHistory(
+	park: string,
+	first: string,
+	second: string,
+	images: string[]
+) {
 	console.log(`updateHistory of ${park} with ${first} and ${second}`)
 
 	await sleep(2000)
@@ -14,6 +19,7 @@ async function updateHistory(park: string, first: string, second: string) {
 			$set: {
 				'history.description.first': first,
 				'history.description.second': second,
+				'history.images': images,
 			},
 		}
 	)

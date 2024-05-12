@@ -1,44 +1,102 @@
 'use client'
-import '../globals.css'
-import React from 'react'
-import { useState, useEffect } from 'react'
+
+import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
+import { useSearchParams } from 'next/navigation'
+import Splash from '../assets/splashscreen 1.png'
+import Logo from '../assets/new-enc-logo-300x144 1.png'
 import MapPin from '@/components/MapPin'
 import ParkName from '@/components/ParkName'
-import ParkModal from '@/components/ParkModal'
-import { ParkPopups } from '@/types'
-import withTimeout from '../../components/Timeout'
-
 import MapButton from '@/components/MapButton'
-
-// interface ModalsState {
-// 	park1: boolean
-// 	park2: boolean
-// 	park3: boolean
-// 	park4: boolean
-// 	park5: boolean
-// 	park6: boolean
-// }
-// const initialState: ModalsState = {
-// 	park1: false,
-// 	park2: false,
-// 	park3: false,
-// 	park4: false,
-// 	park5: false,
-// 	park6: false,
-// }
+import { ParkPopups } from '@/types'
 
 interface Props {
+	parkPopups: ParkPopups
+}
+
+const Client: React.FC<Props> = ({ parkPopups }) => {
+	const [start, setStart] = useState<boolean>(false)
+
+	// if ?map=true is in the URL, set map to true
+
+	const searchParams = useSearchParams()
+	const mapParam = searchParams.get('map')
+
+	useEffect(() => {
+		console.log(mapParam)
+		if (mapParam === 'true') {
+			setStart(false)
+		}
+	}, [])
+
+	return (
+		<div>
+			{start ? (
+				<WelcomePage setStart={setStart} />
+			) : (
+				<MapPage text={parkPopups} />
+			)}
+		</div>
+	)
+}
+
+export default Client
+
+interface WelcomePageProps {
+	setStart: (map: boolean) => void
+}
+const WelcomePage: React.FC<WelcomePageProps> = ({ setStart }) => {
+	const handleClick = () => {
+		setStart(false)
+	}
+	return (
+		<div
+			className="text-2xl w-full h-screen flex justify-center items-center bg-#FFFFFF z-50"
+			onClick={handleClick}
+		>
+			<Image
+				src={Splash}
+				alt="Splash Background"
+				style={{
+					position: 'absolute',
+					top: '0',
+					left: '0',
+					width: '100%',
+					height: '100%',
+				}}
+			/>
+			<Image
+				src={Logo}
+				alt="Logo"
+				style={{
+					position: 'absolute',
+					top: '10%',
+					left: '20%',
+					width: '20%',
+					height: '15%',
+				}}
+			/>
+			<h1
+				className="absolute top-45 left-1/2 transform -translate-x-1/2 text-center text-5xl text-[#567534] "
+				style={{
+					position: 'absolute',
+					top: '32%',
+					left: '30%',
+					width: '50%',
+					height: '20%',
+				}}
+			>
+				Park History <br /> and Attractions
+			</h1>
+		</div>
+	)
+}
+
+interface MapPageProps {
 	text: ParkPopups
 }
-// const text: string[] = [
-// 	'At 527 acres, Franklin Park is the largest park in the Emerald Necklace. Named for Benjamin Franklin, the park brings together rural scenery, spectacular rock outcroppings, a woodland preserve, expansive pastoral vistas and an area for active recreation and sports.',
-// 	'Established in 1872, the Arnold Arboretum is open daily to the public as a free landscape for the study and enjoyment of trees, shrubs, and vines. The Arboretum is both a beautiful landscape of mature plants and a site for vital scientific research.',
-// 	'A pure, glacial kettle hole, Jamaica Pond captivated landscape architect Fredrick Law Olmsted with its “great beauty in reflections and flickering half-lights.” The boathouse at Jamaica Pond provides facilities for sailing, rowing, and fishing. The pond is stocked with trout and salmon raised in state hatcheries.',
-// 	'Landscape architect Fredrick Law Olmsted designed the park as “a chain of picturesque fresh-water ponds, alternating with attractive natural groves and meads.” Pathways, bridges, and plantings provide a series of vignettes with scene changes along the way.',
-// 	'The Riverway, which serves as a border between Boston and Brookline, is a narrow 34-acre park with paths that follow the meandering course of the Muddy River. With more than 100,000 plantings, it is home to some of the most beautiful bridges in the Emerald Necklace.',
-// 	'The Back Bay Fens is an eclectic mix of formal and community gardens, ball fields, memorials and historic structures. With places for passive recreation and active pursuits, the park offers a range of experiences such as gardening and sports and is a popular spot for birders.',
-// ]
-const MapPage: React.FC<Props> = ({ text }) => {
+
+const MapPage: React.FC<MapPageProps> = ({ text }) => {
 	const [open, setOpen] = useState<boolean[]>(new Array(6).fill(false))
 
 	useEffect(() => {
@@ -139,7 +197,7 @@ const MapPage: React.FC<Props> = ({ text }) => {
 					text={text.backBayFens}
 					open={open}
 					setOpen={setOpen}
-					index={1}
+					index={5}
 				/>
 			</div>
 			<div className="absolute" style={{ left: '445px', top: '30px' }}>
@@ -193,7 +251,7 @@ const MapPage: React.FC<Props> = ({ text }) => {
 					text={text.riverway}
 					open={open}
 					setOpen={setOpen}
-					index={5}
+					index={1}
 				/>
 			</div>
 			<br />
@@ -201,5 +259,3 @@ const MapPage: React.FC<Props> = ({ text }) => {
 		</div>
 	)
 }
-
-export default withTimeout(MapPage)

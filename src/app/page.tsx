@@ -1,15 +1,11 @@
-'use client'
-import React, { useState } from 'react';
-import ParkName from '@/components/ParkName';
-import MapPin from '@/components/MapPin';
-import ParkNav from '../components/ParkNav';
-import WelcomePage from '../components/WelcomePage';
-import MapPage from './map/page';
+import React from 'react'
+import { ParkPopups } from '@/types'
+import getParkPopups from '@/actions/getParkPopups'
+import Client from './Client'
 
-function App() {
-  return (
-    <WelcomePage/>
-  );
+async function App() {
+	const text: ParkPopups = await getParkPopups()
+	return <Client parkPopups={text} />
 }
 
 export default App
